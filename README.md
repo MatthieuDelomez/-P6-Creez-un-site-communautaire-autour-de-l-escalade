@@ -1,6 +1,4 @@
-# -P6-Creez-un-site-communautaire-autour-de-l-escalade
-<<<<<<< HEAD
-=======
+# -P6-Creez-un-site-communautaire-autour-de-l-escalade =======
 
 Les Acteurs:
 
@@ -28,4 +26,4 @@ le parcours.
 
 4 - Avoir un espace de prêt pour chaque topo, qui sera présente sur la page et qui renverra 
 à l'historique de prêt pour savoir si le topo est dispobible ou pas.
->>>>>>> f02851ffe7c2751e59aeb0be3ec6ca6287c71a96
+
