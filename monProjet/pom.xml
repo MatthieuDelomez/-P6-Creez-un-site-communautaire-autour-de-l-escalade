@@ -236,7 +236,7 @@
                     <version>3.0.0</version>
                 </plugin>
 
-                <!-- Site -->
+                <!-- Génération du Site -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>

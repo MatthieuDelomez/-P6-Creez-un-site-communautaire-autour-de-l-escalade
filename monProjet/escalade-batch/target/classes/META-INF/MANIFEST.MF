@@ -1,6 +1,8 @@
 Manifest-Version: 1.0
 Built-By: Ben Gourion
+Class-Path: escalade-business-1.0-SNAPSHOT.jar escalade-consumer-1.0-S
+ NAPSHOT.jar escalade-model-1.0-SNAPSHOT.jar
 Build-Jdk: 1.8.0_181
 Created-By: Maven Integration for Eclipse
-Main-Class: org.projetoc.escalade.App
+Main-Class: org.projetoc.escalade.batch.App
 
