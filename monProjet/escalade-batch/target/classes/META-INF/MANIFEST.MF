@@ -1,7 +1,10 @@
 Manifest-Version: 1.0
 Built-By: Ben Gourion
 Class-Path: escalade-business-1.0-SNAPSHOT.jar escalade-consumer-1.0-S
- NAPSHOT.jar escalade-model-1.0-SNAPSHOT.jar
+ NAPSHOT.jar spring-jdbc-4.3.11.RELEASE.jar spring-beans-4.3.11.RELEAS
+ E.jar spring-core-4.3.11.RELEASE.jar commons-logging-1.2.jar spring-t
+ x-4.3.11.RELEASE.jar javax.inject-1.jar escalade-model-1.0-SNAPSHOT.j
+ ar postgresql-9.4.1212.jar
 Build-Jdk: 1.8.0_181
 Created-By: Maven Integration for Eclipse
 Main-Class: org.projetoc.escalade.batch.App

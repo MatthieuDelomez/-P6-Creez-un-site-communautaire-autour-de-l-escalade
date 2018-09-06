@@ -3,7 +3,7 @@
 <footer class="footer">
     <div class="container">
         <p>
-            TicketTac - version 1.0-SNAPSHOT
+            4 Climb - version 1.0-SNAPSHOT
             &copy; <a href="${organization.url}">${organization.name}</a>
         </p>
     </div>

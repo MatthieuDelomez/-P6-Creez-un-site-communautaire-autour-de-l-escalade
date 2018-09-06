@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TicketTac - A propos</title>
+    <title>4 Climb - A propos</title>
     <!-- Bootstrap -->
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -27,9 +27,9 @@
 
 <div class="container">
     <ul>
-        <li>Application : TicketTac</li>
+        <li>Application : 4 Climb</li>
         <li>Version : 1.0-SNAPSHOT</li>
-        <li>Date du build : 2018-08-14T15:33:39Z</li>
+        <li>Date du build : 2018-09-05T11:31:41Z</li>
     </ul>
 </div>
 
