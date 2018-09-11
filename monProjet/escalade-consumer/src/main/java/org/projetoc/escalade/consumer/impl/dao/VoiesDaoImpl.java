@@ -4,6 +4,7 @@ import java.sql.Types;
 
 import org.projetoc.escalade.consumer.contract.dao.VoiesDao;
 import org.projetoc.escalade.model.Voies;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 
 public class VoiesDaoImpl extends AbstractDaoImpl implements VoiesDao {
@@ -16,6 +17,12 @@ public class VoiesDaoImpl extends AbstractDaoImpl implements VoiesDao {
 		args.addValue("voies_nom_voies", voies.getNom_voies(), Types.VARCHAR);
 		args.addValue("voies_nom_secteur", voies.getNom_secteur(), Types.VARCHAR);
 		args.addValue("voies_nom_du_site", voies.getNom_du_site(), Types.VARCHAR);
+		
+		try {
+            getNamedParameterJdbcTemplate().update(sql, args);
+        } catch (DuplicateKeyException exception) {
+            System.out.println(exception.getMessage());
+        }
 
 	}
 

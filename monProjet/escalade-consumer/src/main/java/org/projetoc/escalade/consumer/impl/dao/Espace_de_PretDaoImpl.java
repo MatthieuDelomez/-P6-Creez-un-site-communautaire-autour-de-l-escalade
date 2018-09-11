@@ -4,6 +4,7 @@ import java.sql.Types;
 
 import org.projetoc.escalade.consumer.contract.dao.Espace_de_PretDao;
 import org.projetoc.escalade.model.Espace_de_Pret;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 
 public class Espace_de_PretDaoImpl extends AbstractDaoImpl implements Espace_de_PretDao {
@@ -16,9 +17,16 @@ public class Espace_de_PretDaoImpl extends AbstractDaoImpl implements Espace_de_
         args.addValue("pret_disponible", pret.isDisponible(), Types.BOOLEAN);
         args.addValue("pret_date_de_location", pret.getDate_de_location(), Types.VARCHAR);
         args.addValue("pret_authorProprio", pret.getAuthorProprio(), Types.VARCHAR);
+        
+        try {
+            getNamedParameterJdbcTemplate().update(sql, args);
+        } catch (DuplicateKeyException exception) {
+            System.out.println(exception.getMessage());
+        }
 		
 	}
 
+	/* SELECT*/
 	@Override
 	public Espace_de_Pret getEspace_de_Pret(Espace_de_Pret pret) {
 		// TODO Auto-generated method stub

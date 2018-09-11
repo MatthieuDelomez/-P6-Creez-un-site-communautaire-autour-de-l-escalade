@@ -19,6 +19,11 @@ public class Publication {
 		this.author = author;
 	}
 
+	public Publication() {
+
+	super();
+	}
+
 	public String getTitre() {
 		return titre;
 	}

@@ -15,6 +15,10 @@ public class Utilisateur {
 		this.prenom = prenom;
 		this.email = email;
 	}
+	
+	public Utilisateur() {
+		super();
+	}
 
 	public String getPseudo() {
 		return pseudo;

@@ -20,6 +20,11 @@ public class Espace_de_Pret {
 		this.author = author;
 	}
 
+	public Espace_de_Pret() {
+
+	super();
+	}
+
 	public boolean isDisponible() {
 		return disponible;
 	}

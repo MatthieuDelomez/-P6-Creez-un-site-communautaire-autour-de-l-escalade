@@ -15,6 +15,11 @@ public class Secteur {
 		this.nameSecteur = nameSecteur;
 	}
 
+	public Secteur() {
+
+	super();
+	}
+
 	public String getNom_secteur() {
 		return nom_secteur;
 	}

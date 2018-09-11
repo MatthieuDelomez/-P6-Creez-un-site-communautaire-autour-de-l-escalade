@@ -4,6 +4,7 @@ import java.sql.Types;
 
 import org.projetoc.escalade.consumer.contract.dao.SecteurDao;
 import org.projetoc.escalade.model.Secteur;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 
 public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDao{
@@ -14,7 +15,13 @@ public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDao{
 		
 		MapSqlParameterSource args = new MapSqlParameterSource();
         args.addValue("secteur_nom_secteur", secteur.getNom_secteur(), Types.VARCHAR);
-        args.addValue("publication_nom_du_site", secteur.getNom_du_site(), Types.VARCHAR);
+        args.addValue("secteur_nom_du_site", secteur.getNom_du_site(), Types.VARCHAR);
+        
+        try {
+            getNamedParameterJdbcTemplate().update(sql, args);
+        } catch (DuplicateKeyException exception) {
+            System.out.println(exception.getMessage());
+        }
        }
 
 	@Override

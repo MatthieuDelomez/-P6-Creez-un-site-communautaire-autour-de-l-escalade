@@ -12,6 +12,11 @@ public class Sites {
 		this.nombre_de_secteur = nombre_de_secteur;
 	}
 
+	public Sites() {
+
+	super();
+	}
+
 	public String getNom_du_site() {
 		return nom_du_site;
 	}

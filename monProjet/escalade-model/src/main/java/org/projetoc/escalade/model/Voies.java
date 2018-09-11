@@ -19,6 +19,11 @@ public class Voies {
 		this.nom_site = nom_site;
 	}
 
+	public Voies() {
+
+	super();
+	}
+
 	public String getNom_voies() {
 		return nom_voies;
 	}

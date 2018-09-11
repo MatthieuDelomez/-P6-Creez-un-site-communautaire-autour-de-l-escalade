@@ -31,6 +31,10 @@ public class Topo {
 		TitrePubli = titrePubli;
 	}
 
+	public Topo() {
+		super();
+	}
+
 	public String getRef() {
 		return ref;
 	}

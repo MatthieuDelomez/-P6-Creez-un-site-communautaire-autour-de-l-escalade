@@ -28,5 +28,7 @@ public abstract class AbstractDaoImpl {
     public static void setDataSource(DataSource dataSource) {
         AbstractDaoImpl.dataSource = dataSource;
     }
+    
+    
 
 }

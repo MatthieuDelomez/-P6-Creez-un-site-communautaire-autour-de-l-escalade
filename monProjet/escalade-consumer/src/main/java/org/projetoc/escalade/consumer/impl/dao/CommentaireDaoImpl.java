@@ -4,7 +4,14 @@ import java.sql.Types;
 
 import org.projetoc.escalade.consumer.contract.dao.CommentaireDao;
 import org.projetoc.escalade.model.Commentaire;
+import org.projetoc.escalade.model.Utilisateur;
+import org.springframework.dao.DuplicateKeyException;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+
+import RowMapper.CommentaireMapper;
+import RowMapper.UtilisateurMapper;
 
 public class CommentaireDaoImpl extends AbstractDaoImpl implements CommentaireDao {
 
@@ -21,6 +28,12 @@ public class CommentaireDaoImpl extends AbstractDaoImpl implements CommentaireDa
 		args.addValue("commentaire_updateAt", commentaire.getUpdateAt(), Types.DATE);
 		args.addValue("commentaire_content", commentaire.getContent(), Types.VARCHAR);
 		
+		try {
+            getNamedParameterJdbcTemplate().update(sql, args);
+        } catch (DuplicateKeyException exception) {
+            System.out.println(exception.getMessage());
+        }
+		
 
 
 
@@ -28,7 +41,23 @@ public class CommentaireDaoImpl extends AbstractDaoImpl implements CommentaireDa
 
 	@Override
 	public Commentaire getCommentaire(Commentaire commentaire) {
-		// TODO Auto-generated method stub
+
+		String sql = "SELECT * FROM commentaire WHERE createdAt = :commentaire_createdAt;";
+		
+		MapSqlParameterSource args = new MapSqlParameterSource();
+        args.addValue("commentaire_createdAt", commentaire.getCreatedAt(), Types.DATE);
+
+        
+        try {
+            RowMapper<Commentaire> rowMapper = new CommentaireMapper();
+            Commentaire userQuery = getNamedParameterJdbcTemplate().queryForObject(sql, args, rowMapper);
+            
+
+        } catch (EmptyResultDataAccessException exception) {
+            System.out.println("Incorrect");
+            return null;
+        }
+		
 		return null;
 	}
 

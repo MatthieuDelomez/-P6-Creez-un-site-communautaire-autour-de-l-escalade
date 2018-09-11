@@ -31,6 +31,10 @@ public class Commentaire {
 		this.publication = publication;
 	}
 
+	public Commentaire() {
+		super();
+	}
+
 	public int getId() {
 		return id;
 	}
