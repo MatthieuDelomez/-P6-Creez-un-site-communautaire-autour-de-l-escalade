@@ -2,37 +2,47 @@ package org.projetoc.escalade.consumer.impl.dao;
 
 import java.sql.Types;
 
+import javax.sql.DataSource;
+
 import org.projetoc.escalade.consumer.contract.dao.UtilisateurDao;
 import org.projetoc.escalade.model.Utilisateur;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 
 import RowMapper.UtilisateurMapper;
 
-public class UtilisateurDaoImpl extends AbstractDaoImpl implements UtilisateurDao {
+public class UtilisateurDaoImpl implements UtilisateurDao {
+	
+	private DataSource dataSource;
+
+    public void setDataSource(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
 
 	/*Ajouter dans la abase*/
 	@Override
 	public void addUser(Utilisateur user) {
 
-		String sql = "INSERT INTO utilisateur (pseudo, nom, prenom, email) VALUES (:user_pseudo ,:user_nom , :user_prenom, :user_email );";
+		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+		String sql = "INSERT INTO utilisateur (pseudo, nom, prenom, email) VALUES (?,?,?,?);";
 		
-		MapSqlParameterSource args = new MapSqlParameterSource();
-        args.addValue("user_pseudo", user.getNom(), Types.VARCHAR);
-        args.addValue("user_nom", user.getPrenom(), Types.VARCHAR);
-        args.addValue("user_prenom", user.getPrenom(), Types.VARCHAR);
-        args.addValue("user_email", user.getPrenom(), Types.VARCHAR);
+	Object[] args = new Object[] {user.getPseudo(),user.getNom(),user.getPrenom(),user.getEmail()};
+		
         
         try {
-            getNamedParameterJdbcTemplate().update(sql, args);
+            jdbcTemplate.update(sql, args);
         } catch (DuplicateKeyException exception) {
             System.out.println(exception.getMessage());
         }
 
 
 	}
+
+
+	
 
 	/*SELECT ++> Queryforobject
 	 * Recuperer l'information dans la base de donnees 
@@ -41,15 +51,17 @@ public class UtilisateurDaoImpl extends AbstractDaoImpl implements UtilisateurDa
 	@Override
 	public Utilisateur getUser(Utilisateur user) {
 
-		String sql = "SELECT * FROM utilisateur WHERE email = :user_email AND pseudo= :user_pseudo;";
+		String sql = "SELECT * FROM utilisateur WHERE  pseudo= ?";
+		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 		
-		MapSqlParameterSource args = new MapSqlParameterSource();
-        args.addValue("user_email", user.getEmail(), Types.VARCHAR);
-        args.addValue("pseudo", "matthieu", Types.VARCHAR);
+		Object[] args = new Object[] {
+				 user.getPseudo()
+		};
+
         
         try {
             RowMapper<Utilisateur> rowMapper = new UtilisateurMapper();
-            Utilisateur userQuery = getNamedParameterJdbcTemplate().queryForObject(sql, args, rowMapper);
+            Utilisateur userQuery = jdbcTemplate.queryForObject(sql, args, rowMapper);
             
 
         } catch (EmptyResultDataAccessException exception) {

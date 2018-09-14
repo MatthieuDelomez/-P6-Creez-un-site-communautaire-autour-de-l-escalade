@@ -29,7 +29,7 @@
     <ul>
         <li>Application : 4 Climb</li>
         <li>Version : 1.0-SNAPSHOT</li>
-        <li>Date du build : 2018-09-11T11:58:05Z</li>
+        <li>Date du build : 2018-09-14T16:46:33Z</li>
     </ul>
 </div>
 
