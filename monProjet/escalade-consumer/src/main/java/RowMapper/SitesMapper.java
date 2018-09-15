@@ -11,8 +11,8 @@ public class SitesMapper implements RowMapper<Sites> {
 	
 	public Sites mapRow(ResultSet rs, int rowNum) throws SQLException {
 		Sites sites = new Sites();
-		sites.setNom_du_site(rs.getString("NOM_DU_SITE"));
-		sites.setNombre_de_secteur(rs.getInt("NOMBRE_DE_SECTEUR"));
+		sites.setNom_du_site(rs.getString("nom_du_site"));
+		sites.setNombre_de_secteur(rs.getInt("nombre_de_secteur"));
 
 
 		return sites;

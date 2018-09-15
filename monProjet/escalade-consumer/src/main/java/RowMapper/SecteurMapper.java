@@ -11,8 +11,8 @@ public class SecteurMapper implements RowMapper<Secteur> {
 	
 	public Secteur mapRow(ResultSet rs, int rowNum) throws SQLException {
 		Secteur secteur = new Secteur();
-		secteur.setNom_secteur(rs.getString("NOM_SECTEUR"));
-		secteur.setNom_du_site(rs.getString("NOM_DU_SITE"));
+		secteur.setNom_secteur(rs.getString("nom_secteur"));
+		secteur.setNom_du_site(rs.getString("nom_du_site"));
 
 
 

@@ -12,9 +12,9 @@ public class VoiesMapper implements RowMapper<Voies> {
 	
 	public Voies mapRow(ResultSet rs, int rowNum) throws SQLException {
 		Voies voies = new Voies();
-		voies.setNom_voies(rs.getString("NOM_VOIES"));
-		voies.setNom_secteur(rs.getString("NOM_SECTEUR"));
-		voies.setNom_du_site(rs.getString("NOM_DU_SITE"));
+		voies.setNom_voies(rs.getString("nom_voies"));
+		voies.setNom_secteur(rs.getString("nom_secteur"));
+		voies.setNom_du_site(rs.getString("nom_du_site"));
 
 		return voies;
 	}

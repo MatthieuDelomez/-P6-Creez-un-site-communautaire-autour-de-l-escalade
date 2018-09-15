@@ -12,13 +12,12 @@ public class CommentaireMapper implements RowMapper<Commentaire>{
 	
 	public Commentaire mapRow(ResultSet rs, int rowNum) throws SQLException {
 		Commentaire commentaire = new Commentaire();
-		commentaire.setId(rs.getInt("ID"));
-		commentaire.setUserAccountId(rs.getInt("USERACCOUNTID"));
-		commentaire.setPublicationId(rs.getInt("PUBLICATIONID"));
-		commentaire.setParentId(rs.getInt("PARENTID"));
-		commentaire.setCreatedAt(rs.getDate("CREATEDAT"));
-		commentaire.setUpdateAt(rs.getDate("UPDATEAT"));
-		commentaire.setContent(rs.getString("CONTENT"));
+		commentaire.setId(rs.getInt("id"));
+		commentaire.setPseudo(rs.getString("pseudo"));
+		commentaire.setPublicationId(rs.getInt("publicationid"));
+		commentaire.setTitre(rs.getString("titre"));
+		commentaire.setCreatedAt(rs.getDate("createdat"));
+		
 
 
 

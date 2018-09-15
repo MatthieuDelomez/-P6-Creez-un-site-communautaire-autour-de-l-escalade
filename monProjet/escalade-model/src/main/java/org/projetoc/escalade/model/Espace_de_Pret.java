@@ -7,17 +7,15 @@ public class Espace_de_Pret {
 
 	private boolean disponible;
 	private String date_de_location;
-	private String authorProprio;
+	private String pseudo_proprio;
 
-	private Utilisateur author;
 
 	
-	public Espace_de_Pret(boolean disponible, String date_de_location, String authorProprio, Utilisateur author) {
+	public Espace_de_Pret(boolean disponible, String date_de_location, String pseudo_proprio ) {
 		super();
 		this.disponible = disponible;
 		this.date_de_location = date_de_location;
-		this.authorProprio = authorProprio;
-		this.author = author;
+		this.pseudo_proprio = pseudo_proprio;
 	}
 
 	public Espace_de_Pret() {
@@ -41,20 +39,13 @@ public class Espace_de_Pret {
 		this.date_de_location = date_de_location;
 	}
 
-	public String getAuthorProprio() {
-		return authorProprio;
+	public String getPseudo_proprio() {
+		return pseudo_proprio;
 	}
 
-	public void setAuthorProprio(String authorProprio) {
-		this.authorProprio = authorProprio;
+	public void setPseudo_proprio(String pseudo_proprio) {
+		this.pseudo_proprio = pseudo_proprio;
 	}
 
-	public Utilisateur getAuthor() {
-		return author;
-	}
-
-	public void setAuthor(Utilisateur author) {
-		this.author = author;
-	}
-
+	
 }

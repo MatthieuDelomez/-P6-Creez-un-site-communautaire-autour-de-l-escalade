@@ -13,9 +13,9 @@ public class EspacePretMapper implements RowMapper<Espace_de_Pret>{
 
 	public Espace_de_Pret mapRow(ResultSet rs, int rowNum) throws SQLException {
 		Espace_de_Pret pret = new Espace_de_Pret();
-		pret.setDisponible(rs.getBoolean("DISPONIBLE"));
-		pret.setDate_de_location(rs.getString("DATE_DE_LOCATION"));
-		pret.setAuthorProprio(rs.getString("AUTHORPROPRIO"));
+		pret.setDisponible(rs.getBoolean("disponible"));
+		pret.setDate_de_location(rs.getString("date_de_location"));
+		pret.setPseudo_proprio(rs.getString("pseudo_proprio"));
 
 
 

@@ -62,14 +62,14 @@ public class UtilisateurDaoImpl implements UtilisateurDao {
         try {
             RowMapper<Utilisateur> rowMapper = new UtilisateurMapper();
             Utilisateur userQuery = jdbcTemplate.queryForObject(sql, args, rowMapper);
-            
+            return userQuery;
 
         } catch (EmptyResultDataAccessException exception) {
             System.out.println("Incorrect");
             return null;
         }
 		
-		return null;
+		
 	}
 
 	@Override

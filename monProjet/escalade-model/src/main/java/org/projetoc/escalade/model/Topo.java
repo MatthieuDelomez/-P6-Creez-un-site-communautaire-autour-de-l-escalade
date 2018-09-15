@@ -6,6 +6,7 @@ public class Topo {
 	private String nom;
 	private String descriptif;
 	private String niveau_du_topo;
+	private String type_de_topo;
 	private String titre_de_publication;
 	private boolean disponible;
 	private String nom_du_site;
@@ -13,16 +14,17 @@ public class Topo {
 	private Espace_de_Pret louableouPas;
 	private Sites nommage_du_site;
 	private Publication TitrePubli;
-
 	
-	public Topo(String ref, String nom, String descriptif, String niveau_du_topo, String titre_de_publication,
-			boolean disponible, String nom_du_site, Espace_de_Pret louableouPas, Sites nommage_du_site,
-			Publication titrePubli) {
+	
+	public Topo(String ref, String nom, String descriptif, String niveau_du_topo, String type_de_topo,
+			String titre_de_publication, boolean disponible, String nom_du_site, Espace_de_Pret louableouPas,
+			Sites nommage_du_site, Publication titrePubli) {
 		super();
 		this.ref = ref;
 		this.nom = nom;
 		this.descriptif = descriptif;
 		this.niveau_du_topo = niveau_du_topo;
+		this.type_de_topo = type_de_topo;
 		this.titre_de_publication = titre_de_publication;
 		this.disponible = disponible;
 		this.nom_du_site = nom_du_site;
@@ -30,7 +32,7 @@ public class Topo {
 		this.nommage_du_site = nommage_du_site;
 		TitrePubli = titrePubli;
 	}
-
+	
 	public Topo() {
 		super();
 	}
@@ -67,6 +69,14 @@ public class Topo {
 		this.niveau_du_topo = niveau_du_topo;
 	}
 
+	public String getType_de_topo() {
+		return type_de_topo;
+	}
+
+	public void setType_de_topo(String type_de_topo) {
+		this.type_de_topo = type_de_topo;
+	}
+
 	public String getTitre_de_publication() {
 		return titre_de_publication;
 	}
@@ -78,6 +88,7 @@ public class Topo {
 	public boolean isDisponible() {
 		return disponible;
 	}
+
 
 	public void setDisponible(boolean disponible) {
 		this.disponible = disponible;

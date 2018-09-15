@@ -3,15 +3,22 @@ package org.projetoc.escalade.consumer.impl.dao;
 import java.sql.Types;
 
 import org.projetoc.escalade.consumer.contract.dao.VoiesDao;
+import org.projetoc.escalade.model.Espace_de_Pret;
 import org.projetoc.escalade.model.Voies;
 import org.springframework.dao.DuplicateKeyException;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+
+import RowMapper.EspacePretMapper;
+import RowMapper.VoiesMapper;
 
 public class VoiesDaoImpl extends AbstractDaoImpl implements VoiesDao {
 
 	@Override
 	public void addVoies(Voies voies) {
-		String sql = "INSERT INTO voies ( nom_voies, nom_secteur, nom_du_site) VALUES (:voies_nom_voies , :voies_nom_secteur, :voies_nom_du_site );";
+		String sql = "INSERT INTO voies ( nom_voies, nom_secteur, nom_du_site) VALUES (?,?,?);";
 
 		MapSqlParameterSource args = new MapSqlParameterSource();
 		args.addValue("voies_nom_voies", voies.getNom_voies(), Types.VARCHAR);
@@ -28,8 +35,21 @@ public class VoiesDaoImpl extends AbstractDaoImpl implements VoiesDao {
 
 	@Override
 	public Voies getVoies(Voies voies) {
-		// TODO Auto-generated method stub
-		return null;
+		String sql = "SELECT * FROM voies WHERE nom_voies = ?";
+
+		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+
+		Object[] args = new Object[] { voies.getNom_voies() };
+
+		try {
+			RowMapper<Voies> rowMapper = new VoiesMapper();
+			Voies voiesQuery = jdbcTemplate.queryForObject(sql, args, rowMapper);
+			return voiesQuery;
+
+		} catch (EmptyResultDataAccessException exception) {
+			System.out.println("Incorrect");
+			return null;
+		}
 	}
 
 	@Override

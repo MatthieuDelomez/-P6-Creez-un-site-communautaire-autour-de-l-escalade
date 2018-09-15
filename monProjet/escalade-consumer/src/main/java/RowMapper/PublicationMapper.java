@@ -11,10 +11,10 @@ public class PublicationMapper implements RowMapper<Publication> {
 
 	public Publication mapRow(ResultSet rs, int rowNum) throws SQLException {
 		Publication publication = new Publication();
-		publication.setTitre(rs.getString("TITRE"));
-		publication.setDescription(rs.getString("DESCRIPTION"));
-		publication.setDate_maj(rs.getString("DATE_MAJ"));
-		publication.setPseudo(rs.getString("PSEUDO"));
+		publication.setTitre(rs.getString("titre"));
+		publication.setDescription(rs.getString("description"));
+		publication.setDate_maj(rs.getString("date_maj"));
+		publication.setPseudo(rs.getString("pseudo"));
 
 
 		return publication;

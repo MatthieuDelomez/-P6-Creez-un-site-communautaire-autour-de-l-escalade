@@ -7,6 +7,7 @@ import org.projetoc.escalade.model.Publication;
 import org.projetoc.escalade.model.Utilisateur;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 
@@ -17,8 +18,7 @@ public class PublicationDaoImpl extends AbstractDaoImpl implements PublicationDa
 
 	@Override
 	public void addPublication(Publication publication) {
-		String sql = "INSERT INTO publication (titre, description, date_maj, pseudo) VALUES (:publication_titre ,:publication_description , :publication_date_maj, :publication_pseudo );";
-
+		String sql = "INSERT INTO publication (titre, description, date_maj, pseudo) VALUES (?,?,?,?)";
 		MapSqlParameterSource args = new MapSqlParameterSource();
 		args.addValue("publication_titre", publication.getTitre(), Types.VARCHAR);
 		args.addValue("publication_description", publication.getDescription(), Types.VARCHAR);
@@ -35,22 +35,25 @@ public class PublicationDaoImpl extends AbstractDaoImpl implements PublicationDa
 
 	@Override
 	public Publication getPublication(Publication publication) {
-		String sql = "SELECT * FROM publication WHERE date_maj = :publication_date_maj AND pseudo= :publication_pseudo;";
+		String sql = "SELECT * FROM publication WHERE date_maj = ?";
 
-		MapSqlParameterSource args = new MapSqlParameterSource();
-		args.addValue("publication_date_maj", publication.getDate_maj(), Types.VARCHAR);
-		args.addValue("pseudo", "dalton01", Types.VARCHAR);
+		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+		
+		Object[] args = new Object[] {
+				 publication.getDate_maj()
+		};
+
 
 		try {
 			RowMapper<Publication> rowMapper = new PublicationMapper();
-			Publication userQuery = getNamedParameterJdbcTemplate().queryForObject(sql, args, rowMapper);
+			Publication publicationQuery = jdbcTemplate.queryForObject(sql, args, rowMapper);
+    		return publicationQuery;
 
 		} catch (EmptyResultDataAccessException exception) {
 			System.out.println("Incorrect");
 			return null;
 		}
 
-		return null;
 	}
 
 	@Override
