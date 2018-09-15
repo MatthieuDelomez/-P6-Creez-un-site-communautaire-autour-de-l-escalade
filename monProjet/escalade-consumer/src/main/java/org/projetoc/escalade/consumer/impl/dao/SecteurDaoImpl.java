@@ -14,22 +14,25 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import RowMapper.EspacePretMapper;
 import RowMapper.SecteurMapper;
 
-public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDao{
+public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDao {
 
 	@Override
 	public void addSecteur(Secteur secteur) {
+
+		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+
 		String sql = "INSERT INTO secteur (nom_secteur, nom_du_site) VALUES (?,?)";
+
+		Object[] args = new Object[] { secteur.getNom_secteur(), secteur.getNom_du_site()};
+
+		try {
+			jdbcTemplate.update(sql, args);
+		} catch (DuplicateKeyException exception) {
+			System.out.println(exception.getMessage());
+		}
+
 		
-		MapSqlParameterSource args = new MapSqlParameterSource();
-        args.addValue("secteur_nom_secteur", secteur.getNom_secteur(), Types.VARCHAR);
-        args.addValue("secteur_nom_du_site", secteur.getNom_du_site(), Types.VARCHAR);
-        
-        try {
-            getNamedParameterJdbcTemplate().update(sql, args);
-        } catch (DuplicateKeyException exception) {
-            System.out.println(exception.getMessage());
-        }
-       }
+	}
 
 	@Override
 	public Secteur getSecteur(Secteur secteur) {
@@ -53,19 +56,19 @@ public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDao{
 	@Override
 	public void deleteSecteurPicture(Secteur secteur) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void updateSecteur(Secteur secteur) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void deleteSecteur(Secteur secteur) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

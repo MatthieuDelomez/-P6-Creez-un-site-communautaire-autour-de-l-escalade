@@ -14,70 +14,63 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import RowMapper.TopoMapper;
 import RowMapper.UtilisateurMapper;
 
-public class TopoDaoImpl extends AbstractDaoImpl implements TopoDao{
+public class TopoDaoImpl extends AbstractDaoImpl implements TopoDao {
 
 	@Override
 	public void addTopo(Topo topo) {
+
+		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+
 		String sql = "INSERT INTO topo (ref, nom, descriptif, niveau_du_topo, type_de_topo, titre_de_publication, disponible, nom_du_site) VALUES (?,?,?,?,?,?,?,?)";
+
+		Object[] args = new Object[] { topo.getRef(), topo.getNom(), topo.getDescriptif(), topo.getNiveau_du_topo(), topo.getType_de_topo(), topo.getTitre_de_publication(), topo.isDisponible(), topo.getNom_du_site() };
+
+		try {
+			jdbcTemplate.update(sql, args);
+		} catch (DuplicateKeyException exception) {
+			System.out.println(exception.getMessage());
+		}
+
 		
-		MapSqlParameterSource args = new MapSqlParameterSource();
-        args.addValue("topo_ref", topo.getRef(), Types.VARCHAR);
-        args.addValue("topo_nom", topo.getNom(), Types.VARCHAR);
-        args.addValue("topo_descriptif", topo.getDescriptif(), Types.VARCHAR);
-        args.addValue("topo_niveau_du_topo", topo.getNiveau_du_topo(), Types.VARCHAR);
-        args.addValue("topo_type_de_topo", topo.getType_de_topo(), Types.VARCHAR);
-        args.addValue("topo_titre_de_publication", topo.getTitre_de_publication(), Types.VARCHAR);
-        args.addValue("topo_disponible", topo.isDisponible(), Types.BOOLEAN);
-        args.addValue("topo_nom_du_site", topo.getNom_du_site(), Types.VARCHAR);
-        
-        try {
-            getNamedParameterJdbcTemplate().update(sql, args);
-        } catch (DuplicateKeyException exception) {
-            System.out.println(exception.getMessage());
-        }
-		
+
 	}
 
 	@Override
 	public Topo getTopo(Topo topo) {
 
 		String sql = "SELECT * FROM topo WHERE niveau_du_topo = ?";
-		
+
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-		Object[] args = new Object[] {
-				 topo.getNiveau_du_topo()
-		};
-        
-        try {
-            RowMapper<Topo> rowMapper = new TopoMapper();
-            Topo topoQuery = jdbcTemplate.queryForObject(sql, args, rowMapper);
-    		return topoQuery;
+		Object[] args = new Object[] { topo.getNiveau_du_topo() };
 
+		try {
+			RowMapper<Topo> rowMapper = new TopoMapper();
+			Topo topoQuery = jdbcTemplate.queryForObject(sql, args, rowMapper);
+			return topoQuery;
 
-        } catch (EmptyResultDataAccessException exception) {
-            System.out.println("Incorrect");
-            return null;
-        }
-		
+		} catch (EmptyResultDataAccessException exception) {
+			System.out.println("Incorrect");
+			return null;
+		}
+
 	}
-
 
 	@Override
 	public void deleteTopoPicture(Topo topo) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void updateTopo(Topo topo) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void deleteTopo(Topo topo) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

@@ -18,18 +18,19 @@ public class VoiesDaoImpl extends AbstractDaoImpl implements VoiesDao {
 
 	@Override
 	public void addVoies(Voies voies) {
+		
+		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+
 		String sql = "INSERT INTO voies ( nom_voies, nom_secteur, nom_du_site) VALUES (?,?,?);";
 
-		MapSqlParameterSource args = new MapSqlParameterSource();
-		args.addValue("voies_nom_voies", voies.getNom_voies(), Types.VARCHAR);
-		args.addValue("voies_nom_secteur", voies.getNom_secteur(), Types.VARCHAR);
-		args.addValue("voies_nom_du_site", voies.getNom_du_site(), Types.VARCHAR);
-		
+		Object[] args = new Object[] { voies.getNom_voies(), voies.getNom_secteur(), voies.getNom_du_site() };
+
 		try {
-            getNamedParameterJdbcTemplate().update(sql, args);
-        } catch (DuplicateKeyException exception) {
-            System.out.println(exception.getMessage());
-        }
+			jdbcTemplate.update(sql, args);
+		} catch (DuplicateKeyException exception) {
+			System.out.println(exception.getMessage());
+		}
+
 
 	}
 

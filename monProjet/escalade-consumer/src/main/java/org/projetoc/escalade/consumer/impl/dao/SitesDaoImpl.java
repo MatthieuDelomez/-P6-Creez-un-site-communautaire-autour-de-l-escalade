@@ -18,18 +18,21 @@ public class SitesDaoImpl extends AbstractDaoImpl implements SitesDao {
 
 	@Override
 	public void addSites(Sites sites) {
-		String sql = "INSERT INTO sites (nom_du_site, nombre_de_secteur) VALUES (?, ?);";
 		
-		MapSqlParameterSource args = new MapSqlParameterSource();
-        args.addValue("sites_nom_du_site", sites.getNom_du_site(), Types.VARCHAR);
-        args.addValue("sites_nombre_de_secteur", sites.getNombre_de_secteur(), Types.INTEGER);
-        
-        try {
-            getNamedParameterJdbcTemplate().update(sql, args);
-        } catch (DuplicateKeyException exception) {
-            System.out.println(exception.getMessage());
-        }
-      }
+		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+
+		String sql = "INSERT INTO sites (nom_du_site, nombre_de_secteur) VALUES (?, ?);";
+
+		Object[] args = new Object[] { sites.getNom_du_site(), sites.getNombre_de_secteur()};
+
+		try {
+			jdbcTemplate.update(sql, args);
+		} catch (DuplicateKeyException exception) {
+			System.out.println(exception.getMessage());
+		}
+
+	
+	}
 
 	@Override
 	public Sites getSites(Sites sites) {
@@ -53,19 +56,19 @@ public class SitesDaoImpl extends AbstractDaoImpl implements SitesDao {
 	@Override
 	public void deleteSitesPicture(Sites sites) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void updateSites(Sites sites) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void deleteSites(Sites sites) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

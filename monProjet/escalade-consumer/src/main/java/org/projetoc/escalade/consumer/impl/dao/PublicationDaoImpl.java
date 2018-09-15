@@ -18,20 +18,22 @@ public class PublicationDaoImpl extends AbstractDaoImpl implements PublicationDa
 
 	@Override
 	public void addPublication(Publication publication) {
+		
+		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+
 		String sql = "INSERT INTO publication (titre, description, date_maj, pseudo) VALUES (?,?,?,?)";
-		MapSqlParameterSource args = new MapSqlParameterSource();
-		args.addValue("publication_titre", publication.getTitre(), Types.VARCHAR);
-		args.addValue("publication_description", publication.getDescription(), Types.VARCHAR);
-		args.addValue("publication_date_maj", publication.getDate_maj(), Types.VARCHAR);
-		args.addValue("publication_pseudo", publication.getPseudo(), Types.VARCHAR);
+	
+	Object[] args = new Object[] {publication.getTitre(),publication.getDescription(),publication.getDate_maj(), publication.getPseudo()};
+		
+        
+    try {
+        jdbcTemplate.update(sql, args);
+    } catch (DuplicateKeyException exception) {
+        System.out.println(exception.getMessage());
+    }
 
-		try {
-			getNamedParameterJdbcTemplate().update(sql, args);
-		} catch (DuplicateKeyException exception) {
-			System.out.println(exception.getMessage());
-		}
 
-	}
+}
 
 	@Override
 	public Publication getPublication(Publication publication) {

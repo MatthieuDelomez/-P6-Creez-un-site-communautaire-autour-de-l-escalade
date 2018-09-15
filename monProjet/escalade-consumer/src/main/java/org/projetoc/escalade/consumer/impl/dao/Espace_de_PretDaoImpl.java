@@ -18,17 +18,20 @@ public class Espace_de_PretDaoImpl extends AbstractDaoImpl implements Espace_de_
 
 	@Override
 	public void addEspace_de_Pret(Espace_de_Pret pret) {
-		String sql = "INSERT INTO espace_de_pret (disponible, date_de_location, pseudo_proprio) VALUES (?,?,?)";
-		MapSqlParameterSource args = new MapSqlParameterSource();
-		args.addValue("pret_disponible", pret.isDisponible(), Types.BOOLEAN);
-		args.addValue("pret_date_de_location", pret.getDate_de_location(), Types.VARCHAR);
-		args.addValue("pret_pseudo_proprio", pret.getPseudo_proprio(), Types.VARCHAR);
+		
+		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+		String sql = "INSERT INTO espace_de_pret (disponible, date_de_location, pseudo_proprio) VALUES (?,?,?);";
+		
+	Object[] args = new Object[] {pret.isDisponible(),pret.getDate_de_location(),pret.getPseudo_proprio()};
+		
+        
+        try {
+            jdbcTemplate.update(sql, args);
+        } catch (DuplicateKeyException exception) {
+            System.out.println(exception.getMessage());
+        }
 
-		try {
-			getNamedParameterJdbcTemplate().update(sql, args);
-		} catch (DuplicateKeyException exception) {
-			System.out.println(exception.getMessage());
-		}
+
 
 	}
 
