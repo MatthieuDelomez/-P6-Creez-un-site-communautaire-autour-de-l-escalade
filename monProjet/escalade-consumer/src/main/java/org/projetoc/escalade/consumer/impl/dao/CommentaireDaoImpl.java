@@ -28,9 +28,9 @@ public class CommentaireDaoImpl extends AbstractDaoImpl implements CommentaireDa
 	public void addCommentaire(Commentaire commentaire) {
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 
-		String sql = "INSERT INTO commentaire (id, pseudo, publicationId,  createdAt) VALUES (?, ?, ?, ?)";
+		String sql = "INSERT INTO commentaire (id, titre, pseudo, publicationId,  createdAt) VALUES (?, ?, ?, ?, ?)";
 
-		Object[] args = new Object[] { commentaire.getId(),commentaire.getPseudo(), commentaire.getPublicationId(), commentaire.getCreatedAt() };
+		Object[] args = new Object[] { commentaire.getId(), commentaire.getTitre(),commentaire.getPseudo(), commentaire.getPublicationId(), commentaire.getCreatedAt() };
 
 		try {
 			jdbcTemplate.update(sql, args);

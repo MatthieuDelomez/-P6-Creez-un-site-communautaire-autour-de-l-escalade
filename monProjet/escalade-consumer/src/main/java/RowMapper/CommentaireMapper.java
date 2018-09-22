@@ -13,9 +13,9 @@ public class CommentaireMapper implements RowMapper<Commentaire>{
 	public Commentaire mapRow(ResultSet rs, int rowNum) throws SQLException {
 		Commentaire commentaire = new Commentaire();
 		commentaire.setId(rs.getInt("id"));
+		commentaire.setTitre(rs.getString("titre"));
 		commentaire.setPseudo(rs.getString("pseudo"));
 		commentaire.setPublicationId(rs.getInt("publicationid"));
-		commentaire.setTitre(rs.getString("titre"));
 		commentaire.setCreatedAt(rs.getDate("createdat"));
 		
 

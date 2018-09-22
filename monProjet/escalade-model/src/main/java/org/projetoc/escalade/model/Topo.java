@@ -7,11 +7,8 @@ public class Topo {
 	private String descriptif;
 	private String niveau_du_topo;
 	private String type_de_topo;
-	private String titre_de_publication;
-	private boolean disponible;
 	private String nom_du_site;
 
-	private Espace_de_Pret louableouPas;
 	private Sites nommage_du_site;
 	private Publication TitrePubli;
 	
@@ -25,10 +22,7 @@ public class Topo {
 		this.descriptif = descriptif;
 		this.niveau_du_topo = niveau_du_topo;
 		this.type_de_topo = type_de_topo;
-		this.titre_de_publication = titre_de_publication;
-		this.disponible = disponible;
 		this.nom_du_site = nom_du_site;
-		this.louableouPas = louableouPas;
 		this.nommage_du_site = nommage_du_site;
 		TitrePubli = titrePubli;
 	}
@@ -77,22 +71,8 @@ public class Topo {
 		this.type_de_topo = type_de_topo;
 	}
 
-	public String getTitre_de_publication() {
-		return titre_de_publication;
-	}
+	
 
-	public void setTitre_de_publication(String titre_de_publication) {
-		this.titre_de_publication = titre_de_publication;
-	}
-
-	public boolean isDisponible() {
-		return disponible;
-	}
-
-
-	public void setDisponible(boolean disponible) {
-		this.disponible = disponible;
-	}
 
 	public String getNom_du_site() {
 		return nom_du_site;
@@ -102,13 +82,7 @@ public class Topo {
 		this.nom_du_site = nom_du_site;
 	}
 
-	public Espace_de_Pret getLouableouPas() {
-		return louableouPas;
-	}
-
-	public void setLouableouPas(Espace_de_Pret louableouPas) {
-		this.louableouPas = louableouPas;
-	}
+	
 
 	public Sites getNommage_du_site() {
 		return nommage_du_site;

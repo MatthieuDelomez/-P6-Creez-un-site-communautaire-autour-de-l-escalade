@@ -17,8 +17,6 @@ public class TopoMapper implements RowMapper<Topo> {
 		topo.setDescriptif(rs.getString("descriptif"));
 		topo.setNiveau_du_topo(rs.getString("niveau_du_topo"));
 		topo.setType_de_topo(rs.getString("niveau_du_topo"));
-		topo.setDescriptif(rs.getString("titre_publication"));
-		topo.setDisponible(rs.getBoolean("disponible"));
 		topo.setNom_du_site(rs.getString("nom_du_site"));
 
 

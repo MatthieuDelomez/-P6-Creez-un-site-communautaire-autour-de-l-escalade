@@ -21,9 +21,9 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDao {
 
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 
-		String sql = "INSERT INTO topo (ref, nom, descriptif, niveau_du_topo, type_de_topo, titre_de_publication, disponible, nom_du_site) VALUES (?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO topo (ref, nom, descriptif, niveau_du_topo, type_de_topo, nom_du_site) VALUES (?,?,?,?,?,?)";
 
-		Object[] args = new Object[] { topo.getRef(), topo.getNom(), topo.getDescriptif(), topo.getNiveau_du_topo(), topo.getType_de_topo(), topo.getTitre_de_publication(), topo.isDisponible(), topo.getNom_du_site() };
+		Object[] args = new Object[] { topo.getRef(), topo.getNom(), topo.getDescriptif(), topo.getNiveau_du_topo(), topo.getType_de_topo(), topo.getNom_du_site() };
 
 		try {
 			jdbcTemplate.update(sql, args);

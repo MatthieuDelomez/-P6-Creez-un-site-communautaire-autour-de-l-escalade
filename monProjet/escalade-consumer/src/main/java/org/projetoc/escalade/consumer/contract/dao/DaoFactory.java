@@ -2,7 +2,24 @@ package org.projetoc.escalade.consumer.contract.dao;
 
 public interface DaoFactory {
 	
-    UtilisateurDao getUtilisateuDao();
+	CommentaireDao getCommentaireDao();
+	
+	Espace_de_PretDao getEspace_de_PretDao();
+	    
+    PublicationDao getPublicationDao();
+    
+    SecteurDao getSecteurDao();
+    
+    SitesDao getSitesDao();
+    
+    TopoDao getTopoDao();
+    
+    UtilisateurDao getUtilisateurDao();
+    
+    VoiesDao getVoiesDao();
+    
+
+    
     
 }
 

@@ -20,9 +20,9 @@ public class Espace_de_PretDaoImpl extends AbstractDaoImpl implements Espace_de_
 	public void addEspace_de_Pret(Espace_de_Pret pret) {
 		
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-		String sql = "INSERT INTO espace_de_pret (disponible, date_de_location, pseudo_proprio) VALUES (?,?,?);";
+		String sql = "INSERT INTO espace_de_pret (id_pret , date_de_location, pseudo_proprio, disponible, topo_ref) VALUES (?,?,?,?,?);";
 		
-	Object[] args = new Object[] {pret.isDisponible(),pret.getDate_de_location(),pret.getPseudo_proprio()};
+	Object[] args = new Object[] {pret.getId_pret() ,pret.getDate_de_location(),pret.getPseudo_proprio(), pret.isDisponible(), pret.getRef()};
 		
         
         try {
