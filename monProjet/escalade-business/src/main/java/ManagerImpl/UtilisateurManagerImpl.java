@@ -2,6 +2,7 @@ package ManagerImpl;
 
 import org.projetoc.escalade.model.Utilisateur;
 
+
 import Manager.UtilisateurManager;
 
 public class UtilisateurManagerImpl extends AbstractManager implements UtilisateurManager {
