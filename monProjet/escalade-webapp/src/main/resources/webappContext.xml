@@ -13,7 +13,7 @@
 
     <!-- ==== AbstractResource ===== -->
     <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
-        <property name="targetClass" value="org.projetoc.escalade.webapp.rest.resource.AbstractResource"/>
+        <property name="targetClass" value="com.escalade.resources.AbstractResource"/>
         <property name="targetMethod" value="setManagerFactory"/>
         <property name="arguments" ref="managerFactory"/>
     </bean>

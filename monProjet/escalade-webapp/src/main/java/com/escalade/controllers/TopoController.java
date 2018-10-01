@@ -1,7 +1,9 @@
 package com.escalade.controllers;
 
-import Manager.TopoManager;
+import org.springframework.stereotype.Controller;
 
+import Manager.TopoManager;
+@Controller
 public class TopoController extends AbstractController {
 	
 	private TopoManager topoManager = getManagerFactory().getTopoManager();
