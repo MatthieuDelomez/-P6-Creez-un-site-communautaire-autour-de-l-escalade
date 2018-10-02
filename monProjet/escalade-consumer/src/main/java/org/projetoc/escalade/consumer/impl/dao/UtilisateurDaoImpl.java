@@ -27,9 +27,9 @@ public class UtilisateurDaoImpl implements UtilisateurDao {
 	public void addUser(Utilisateur user) {
 
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-		String sql = "INSERT INTO utilisateur (pseudo, nom, prenom, email) VALUES (?,?,?,?);";
+		String sql = "INSERT INTO utilisateur (pseudo, nom, prenom, email, motpasse) VALUES (?,?,?,?,?);";
 		
-	Object[] args = new Object[] {user.getPseudo(),user.getNom(),user.getPrenom(),user.getEmail()};
+	Object[] args = new Object[] {user.getPseudo(),user.getNom(),user.getPrenom(),user.getEmail(), user.getMotPasse()};
 		
         
         try {

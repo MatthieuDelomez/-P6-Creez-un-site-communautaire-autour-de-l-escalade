@@ -86,7 +86,7 @@
 
 		<property name="username" value="postgres" />
 
-		<property name="password" value="root" />
+		<property name="motpasse" value="root" />
 
 	</bean>
 
