@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
-    <Resource name="jdbc/DB_TICKET"
+    <Resource name="jdbc/ESCALADE"
               auth="Container"
               type="javax.sql.DataSource"
 
-              url="jdbc:postgresql://localhost:5432/db_ticket"
+              url="jdbc:postgresql://localhost:5432/ESCALADE"
               driverClassName="org.postgresql.Driver"
-              username="ticket"
-              password="ticket"
+              username="postgres"
+              password="root"
               defaultAutoCommit="false"
               defaultTransactionIsolation="READ_COMMITTED"
 
