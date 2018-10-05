@@ -37,7 +37,7 @@ public class App {
 		
 		  user.setPseudo("Macaronade"); user.setNom("maca");
 		  user.setPrenom("ronade"); user.setEmail("macaronade@hotmail.com");
-		  user.setMotPasse("lol35");
+		
 		  
 		 //utilisateurDao.addUser(user);
 		 

@@ -1,7 +1,7 @@
 package com.escalade.resources;
 
 
-import ManagerImpl.ManagerFactoryImpl;
+import com.escalade.managerImpl.ManagerFactoryImpl;
 
 public class AbstractResource {
 

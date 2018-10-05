@@ -1,6 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <meta charset="utf-8" />
 <title>Test</title>
@@ -22,8 +20,8 @@
 		<div id="navbar" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 			
-				<li class="active"><a href="/jsp/_include/accueil.jsp">Accueil</a></li>
-				<li><a href="jsp/_include/topo.jsp">Topo</a></li>
+				<li class="active"><a href="${pageContext.request.contextPath}/index">Accueil</a></li>
+				<li><a href="${pageContext.request.contextPath}/login">Se connecter</a></li>
 				<li><a href="jsp/about.jsp">A propos</a></li>
 				
 			</ul>
@@ -32,5 +30,3 @@
 		<!--/.nav-collapse -->
 	</div>
 </nav>
-
-

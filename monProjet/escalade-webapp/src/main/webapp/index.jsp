@@ -20,9 +20,10 @@
 </head>
 <body>
 	<%@ include file="WEB-INF/jsp/_include/header.jsp"%>
-
-
-
-	<p>Hello World!</p>
+        
+        <div style="margin-top:5%">
+            <p style="color: #000">Hello Mister Java!</p>
+        </div>
+	
 </body>
 </html>

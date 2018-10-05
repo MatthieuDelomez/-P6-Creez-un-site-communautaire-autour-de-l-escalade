@@ -2,11 +2,11 @@ package com.escalade.controllers;
 
 import org.springframework.stereotype.Controller;
 
-import Manager.SitesManager;
+import com.escalde.manager.SitesManager;
 @Controller
 
 public class SitesController extends AbstractController {
 	
-	private SitesManager sitesManager = getManagerFactory().getSitesManager();
+	//private SitesManager sitesManager = getManagerFactory().getSitesManager();
 
 }

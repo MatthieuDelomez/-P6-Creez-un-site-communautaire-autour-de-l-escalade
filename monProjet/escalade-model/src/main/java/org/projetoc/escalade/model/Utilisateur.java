@@ -6,16 +6,14 @@ public class Utilisateur {
 	private String nom;
 	private String prenom;
 	private String email;
-	private String motPasse;
 	
 
-	public Utilisateur(String pseudo, String nom, String prenom, String email, String motPasse) {
+	public Utilisateur(String pseudo, String nom, String prenom, String email) {
 		super();
 		this.pseudo = pseudo;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.email = email;
-		this.motPasse = motPasse;
 	}
 	
 	public Utilisateur() {
@@ -52,14 +50,6 @@ public class Utilisateur {
 
 	public void setEmail(String email) {
 		this.email = email;
-	}
-	
-	public String getMotPasse() {
-		return motPasse;
-	}
-
-	public void setMotPasse(String motPasse) {
-		this.motPasse = motPasse;
 	}
 
 }

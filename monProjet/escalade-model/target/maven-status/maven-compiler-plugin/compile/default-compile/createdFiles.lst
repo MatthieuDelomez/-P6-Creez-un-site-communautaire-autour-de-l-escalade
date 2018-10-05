@@ -1,1 +1,9 @@
 org\projetoc\escalade\model\App.class
+org\projetoc\escalade\model\Commentaire.class
+org\projetoc\escalade\model\Sites.class
+org\projetoc\escalade\model\Topo.class
+org\projetoc\escalade\model\Utilisateur.class
+org\projetoc\escalade\model\Publication.class
+org\projetoc\escalade\model\Espace_de_Pret.class
+org\projetoc\escalade\model\Secteur.class
+org\projetoc\escalade\model\Voies.class

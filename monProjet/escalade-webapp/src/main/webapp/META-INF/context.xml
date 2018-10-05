@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context>
+<Context antiJARLocking="true" path="/escalade">
     <Resource name="jdbc/ESCALADE"
               auth="Container"
               type="javax.sql.DataSource"
 
-              url="jdbc:postgresql://localhost:5432/ESCALADE"
-              driverClassName="org.postgresql.Driver"
-              username="postgres"
-              password="root"
-              defaultAutoCommit="false"
+              url="jdbc:mysql://localhost:3306/ESCALADE"
+              driverClassName="com.mysql.jdbc.Driver"
+              username="root"
+              password=""
+              defaultAutoCommit="true"
               defaultTransactionIsolation="READ_COMMITTED"
 
               initialSize="1"
@@ -25,4 +25,5 @@
               testWhileIdle="true"
               testOnBorrow="true"
     />
+
 </Context>

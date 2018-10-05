@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd">
+            
+            <bean id = "utilisateurManager" class="com.escalade.managerImpl.UtilisateurManagerImpl"></bean>
+            <bean id = "commentaireManager" class="com.escalade.managerImpl.CommentaireManagerImpl"></bean>
+            <bean id = "espace_de_pretManager" class="com.escalade.managerImpl.Espace_de_pretManagerImpl"></bean>
+            <bean id = "publicationManager" class="com.escalade.managerImpl.PublicationManagerImpl"></bean>
+            <bean id = "secteurManager" class="com.escalade.managerImpl.SecteurManagerImpl"></bean>
+            <bean id = "sitesManager" class="com.escalade.managerImpl.SitesManagerImpl"></bean>
+            <bean id = "topoManager" class="com.escalade.managerImpl.TopoManagerImpl"></bean>
+            <bean id = "voiesManager" class="com.escalade.managerImpl.VoiesManagerImpl"></bean>
+            
+            <bean id= "managerFactory" class="com.escalade.managerImpl.ManagerFactoryImpl">
+            <property name="utilisateurManager" ref="utilisateurManager"></property> 
+            <property name="commentaireManager" ref="commentaireManager"></property>  
+            <property name="espace_de_pretManager" ref="espace_de_pretManager"></property>
+            <property name="publicationManager" ref="publicationManager"></property>
+            <property name="secteurManager" ref="secteurManager"></property>
+            <property name="sitesManager" ref="sitesManager"></property>
+            <property name="topoManager" ref="topoManager"></property>
+            <property name="voiesManager" ref="voiesManager"></property>
+  
+            </bean>
+            
+            
+            <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+            <property name="targetClass" value="MaganerImpl.AbstractManager"/>
+            <property name="targetMethod" value="setDaoFactory"/>
+            <property name="arguments" ref="daoFactory"/>
+    </bean>
+            
+            
+             
+                        
+            
+                        
+            
+            
+
+</beans>
