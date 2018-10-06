@@ -27,15 +27,17 @@
 
 <body>
     
-       <%@ include file="WEB-INF/jsp/_include/header.jsp"%>
+       <%@ include file="_include/header.jsp"%>
        
        
         <div style="margin-top:25%">
             <div style="margin-left: 25%">
 
-            <h1 style="color: #000">4 Climb</h1>
+            <h1 style="color: #000">YEAH TOPO !!</h1>
         </div>
         </div>
 	
+           <%@ include file="_include/header.jsp"%>
+       
 </body>
 </html>

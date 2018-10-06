@@ -7,6 +7,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>${application.name}- A propos</title>
+
+
+
 <!-- Bootstrap -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -18,11 +21,20 @@
 	crossorigin="anonymous" />
 <link rel="stylesheet" href="../style/custom.css" />
 </head>
+
+
+
+
 <body>
-	<%@ include file="WEB-INF/jsp/_include/header.jsp"%>
-        
-        <div style="margin-top:5%">
-            <p style="color: #000">Hello Mister Java!</p>
+    
+       <%@ include file="WEB-INF/jsp/_include/header.jsp"%>
+       
+       
+        <div style="margin-top:25%">
+            <div style="margin-left: 25%">
+
+            <h1 style="color: #000">4 Climb</h1>
+        </div>
         </div>
 	
 </body>

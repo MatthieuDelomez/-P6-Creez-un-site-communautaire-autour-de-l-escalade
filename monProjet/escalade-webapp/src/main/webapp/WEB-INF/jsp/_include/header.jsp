@@ -20,9 +20,10 @@
 		<div id="navbar" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 			
-				<li class="active"><a href="${pageContext.request.contextPath}/index">Accueil</a></li>
+				<li class="active"><a href="${pageContext.request.contextPath}/">Accueil</a></li>
 				<li><a href="${pageContext.request.contextPath}/login">Se connecter</a></li>
-				<li><a href="jsp/about.jsp">A propos</a></li>
+                                		                   <li><a href="${pageContext.request.contextPath}/topo">Topo</a></li>
+				<li><a href="${pageContext.request.contextPath}/about">A propos</a></li>
 				
 			</ul>
 
