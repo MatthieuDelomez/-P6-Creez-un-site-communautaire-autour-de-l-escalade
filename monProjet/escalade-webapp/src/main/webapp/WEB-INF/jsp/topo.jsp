@@ -19,7 +19,9 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
 	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
 	crossorigin="anonymous" />
-<link rel="stylesheet" href="../style/custom.css" />
+
+<link rel="stylesheet" href="../../css/style.css" />
+
 </head>
 
 
@@ -30,14 +32,12 @@
        <%@ include file="_include/header.jsp"%>
        
        
-        <div style="margin-top:25%">
-            <div style="margin-left: 25%">
+        <div class="testcss">
 
             <h1 style="color: #000">YEAH TOPO !!</h1>
-        </div>
+            
         </div>
 	
-           <%@ include file="_include/header.jsp"%>
        
 </body>
 </html>

@@ -15,6 +15,7 @@
 
     <!-- Enables the Spring MVC @Controller programming model -->
     <mvc:annotation-driven/>
+    <mvc:resources mapping="/resources/**" location="/resources/template/" cache-period="31556926" />
 
 
     <!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
