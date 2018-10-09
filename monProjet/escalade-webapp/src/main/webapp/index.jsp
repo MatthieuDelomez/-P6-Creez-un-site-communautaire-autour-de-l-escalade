@@ -20,7 +20,7 @@
 	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
 	crossorigin="anonymous" />
 
-<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="resources/css/style.css" />
 
 </head>
 
@@ -32,12 +32,19 @@
        <%@ include file="WEB-INF/jsp/_include/header.jsp"%>
        
        
-       <div class="testcss">
 
-            <h1 style="color: #000">4 Climb</h1>
+       
+       
+        <section class="imageback">
+        <div class="containerimage">
+        <img src="resources/img/accueil.png" >     
+
+         <div class="titre">
+         <h1 class="titrage">4 Climb</h1>
+       </div>
         </div>
        
-       <img src="../img/famille.png"/>
+
        
        
 	

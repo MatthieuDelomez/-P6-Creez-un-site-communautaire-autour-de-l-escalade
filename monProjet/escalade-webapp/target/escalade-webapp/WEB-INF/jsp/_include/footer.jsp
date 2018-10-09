@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <footer class="footer">
-    <div class="container">
+    <div class="footcontainer">
         <p>
             ${application.name} - version ${project.version}
             &copy; <a href="${organization.url}">${organization.name}</a>
