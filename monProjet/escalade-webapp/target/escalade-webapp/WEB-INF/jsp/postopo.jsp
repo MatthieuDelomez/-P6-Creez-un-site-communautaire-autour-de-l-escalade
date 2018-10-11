@@ -23,6 +23,8 @@
 <link rel="stylesheet" href="resources/css/style.css" />
         
     </head>
+    
+
 
     <body>
 
@@ -44,12 +46,19 @@
         </div>
       </div>
     </header>
+    
+    
+                          <%@ include file="espace_de_pret.jsp"%>
+
 
     <!-- Post Content -->
     <article>
       <div class="container">
         <div class="row">
+            
           <div class="col-lg-8 col-md-10 mx-auto">
+              
+              
             <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
 
             <p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
@@ -64,16 +73,20 @@
         </div>
       </div>
     </article>
+    
+           <%@ include file="commentaire.jsp"%>
 
 
 
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+ <!-- Bootstrap core JavaScript -->
+    <script src="resources/vendor/jquery/jquery.min.js"></script>
+    <script src="resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/clean-blog.min.js"></script>
-
+    <script src="resources/js/clean-blog.min.js"></script>
+    
   </body>
 </html>

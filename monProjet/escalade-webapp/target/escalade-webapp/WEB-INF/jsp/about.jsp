@@ -21,7 +21,7 @@
           href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
           integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
           crossorigin="anonymous" />
-    <link rel="stylesheet" href="../style/custom.css" />
+    <link rel="stylesheet" href="resources/css/style.css" />
     
     
 </head>
@@ -31,14 +31,13 @@
 
 <%@ include file="_include/header.jsp" %>
 
-<div class="container">
+<div class="about">
     <ul>
-        <li>Application : ${application.name}</li>
-        <li>Version : ${project.version}</li>
-        <li>Date du build : ${maven.build.timestamp}</li>
+        <li>Version : 1.00</li>
+        <li>Date du build : 10/10/18</li>
+        <li>Created by Delomez Matthieu </li>
     </ul>
 </div>
 
-<%@ include file="_include/footer.jsp" %>
 </body>
 </html>

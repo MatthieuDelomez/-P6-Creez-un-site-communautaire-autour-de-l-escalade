@@ -10,6 +10,10 @@
 
 
 
+    <!-- Bootstrap core CSS -->
+    <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
 <!-- Bootstrap -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -19,6 +23,8 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
 	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
 	crossorigin="anonymous" />
+
+
 
 <link rel="stylesheet" href="resources/css/style.css" />
 
@@ -63,7 +69,8 @@
             </a>
             <p class="post-meta">Niveau: 9c de type
               Falaise</p>
-          </div>
+          </div>         
+
             
             
           
@@ -103,25 +110,30 @@
           </div>
           <hr>
           
-          
-          
-          <!-- Pager -->
-          <div class="clearfix">
-            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-          </div>
+
         </div>
       </div>
     </div>
+              
 
+
+       <%@ include file="_include/footer.jsp"%>
+
+          
+          
+          
 
     
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="resources/vendor/jquery/jquery.min.js"></script>
+    <script src="resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/clean-blog.min.js"></script>
+    <script src="resources/js/clean-blog.min.js"></script>
+    
+    
+   
 
   </body>
 

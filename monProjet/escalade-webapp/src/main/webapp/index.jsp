@@ -38,14 +38,12 @@
         <section class="imageback">
         <div class="containerimage">
         <img src="resources/img/accueil.png" >     
-
-         <div class="titre">
-         <h1 class="titrage">4 Climb</h1>
        </div>
-        </div>
-       
 
-       
+                     <h1 class="titrage">4 Climb</h1>
+
+
+
        
 	
 </body>

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <meta charset="utf-8" />
-<title>Test</title>
+<title>4 Climb</title>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container">
@@ -24,6 +24,7 @@
 				<li><a href="${pageContext.request.contextPath}/login">Se connecter</a></li>
                                 		                   <li><a href="${pageContext.request.contextPath}/topo">Topo</a></li>
 				<li><a href="${pageContext.request.contextPath}/about">A propos</a></li>
+
 				
 			</ul>
 
