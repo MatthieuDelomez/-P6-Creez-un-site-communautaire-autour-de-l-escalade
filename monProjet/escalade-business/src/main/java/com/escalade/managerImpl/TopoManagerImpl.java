@@ -3,6 +3,7 @@ package com.escalade.managerImpl;
 import org.projetoc.escalade.model.Topo;
 
 import com.escalde.manager.TopoManager;
+import java.util.List;
 
 public class TopoManagerImpl extends AbstractManager implements TopoManager {
 
@@ -35,5 +36,12 @@ public class TopoManagerImpl extends AbstractManager implements TopoManager {
 		getDaoFactory().getTopoDao().deleteTopo(topo);
 		
 	}
+
+    public List<Topo> getAllTopo() {
+        
+           return getDaoFactory().getTopoDao().getAllTopo();
+        
+        
+    }
 
 }

@@ -4,10 +4,10 @@
               auth="Container"
               type="javax.sql.DataSource"
 
-              url="jdbc:mysql://localhost:3306/ESCALADE"
-              driverClassName="com.mysql.jdbc.Driver"
-              username="root"
-              password=""
+              url="jdbc:postgresql://localhost:5432/ESCALADE"
+              driverClassName="org.postgresql.Driver"
+              username="postgres"
+              password="root"
               defaultAutoCommit="true"
               defaultTransactionIsolation="READ_COMMITTED"
 

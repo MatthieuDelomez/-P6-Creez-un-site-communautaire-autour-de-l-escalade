@@ -13,6 +13,7 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 
 import RowMapper.TopoMapper;
 import RowMapper.UtilisateurMapper;
+import java.util.List;
 
 public class TopoDaoImpl extends AbstractDaoImpl implements TopoDao {
 
@@ -54,6 +55,28 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDao {
 		}
 
 	}
+        
+    /**
+     *
+     * @return
+     */
+        @Override
+	public List<Topo> getAllTopo() {
+
+		String sql = "SELECT * FROM topo";
+
+		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+
+		try {
+			List<Topo> topoQuery = jdbcTemplate.queryForList(sql, Topo.class);
+			return topoQuery;
+
+		} catch (EmptyResultDataAccessException exception) {
+			System.out.println("Incorrect");
+			return null;
+		}
+
+	}
 
 	@Override
 	public void deleteTopoPicture(Topo topo) {
@@ -74,3 +97,5 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDao {
 	}
 
 }
+
+

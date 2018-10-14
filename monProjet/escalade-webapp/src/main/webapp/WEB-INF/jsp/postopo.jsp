@@ -48,7 +48,6 @@
     </header>
     
     
-                          <%@ include file="espace_de_pret.jsp"%>
 
 
     <!-- Post Content -->
@@ -73,7 +72,8 @@
         </div>
       </div>
     </article>
-    
+                              <%@ include file="espace_de_pret.jsp"%>
+
            <%@ include file="commentaire.jsp"%>
 
 
