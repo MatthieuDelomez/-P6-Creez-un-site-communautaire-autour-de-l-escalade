@@ -17,7 +17,7 @@
             <bean id= "managerFactory" class="com.escalade.business.managerImpl.ManagerFactoryImpl">
             <property name="utilisateurManager" ref="utilisateurManager"></property> 
             <property name="commentaireManager" ref="commentaireManager"></property>  
-            <property name="espace_de_pretManager" ref="espacepretManager"></property>
+            <property name="espacepretManager" ref="espacepretManager"></property>
             <property name="publicationManager" ref="publicationManager"></property>
             <property name="secteurManager" ref="secteurManager"></property>
             <property name="sitesManager" ref="sitesManager"></property>

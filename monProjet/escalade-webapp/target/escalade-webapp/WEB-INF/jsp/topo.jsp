@@ -4,7 +4,8 @@
 
 <head>
 <meta charset="utf-8" />
-<meta name=?viewport? content=?width=device-width, initial-scale=1, shrink-to-fit=no?>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>${application.name}- A propos</title>
 
 
@@ -37,6 +38,11 @@
        <%@ include file="_include/header.jsp"%>
        
  
+       <c:forEach var="topo" items="${ topoList }">
+           
+           <p><c:out value="${ topo.description }"/></p>
+           
+       </c:forEach>
 
     <!-- Page Header -->
     <header class="masthead" style="background-image: url('resources/img/topo01.jpg')">
@@ -46,7 +52,7 @@
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
               <h1>Topo</h1>
-              <span class="subheading">Guide de la région</span>
+              <span class="subheading">Guide de la rï¿½gion</span>
             </div>
           </div>
         </div>
@@ -78,13 +84,13 @@
           <div class="post-preview">
             <a href="post.html">
               <h2 class="post-title">
-                Topo de la comète
+                Topo de la comï¿½te
               </h2>
               <h3 class="post-subtitle">
-                Topo assez complexe regroupant plusieurs sites classés
+                Topo assez complexe regroupant plusieurs sites classï¿½s
               </h3>
             </a>
-            <p class="post-meta">Niveau: 5a à 8b de type
+            <p class="post-meta">Niveau: 5a ï¿½ 8b de type
               Bloc</p>
           </div>
           

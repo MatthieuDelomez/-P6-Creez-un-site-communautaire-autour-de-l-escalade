@@ -6,9 +6,8 @@
             http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- Inclusion d'autres fichiers de contexte Spring -->
-    <import resource="classpath:/com.escalade/webappContext.xml" />
-    <import resource="classpath:/com.escalade/businessContext.xml" />
-    <import resource="classpath:/com.escalade/spring.xml" />
-    
-    
+    <import resource="classpath:/com/escalade/webappContext.xml" />
+    <import resource="classpath:com/escalade/businessContext.xml" />
+    <import resource="classpath:com/escalade/spring.xml" />
+
 </beans>

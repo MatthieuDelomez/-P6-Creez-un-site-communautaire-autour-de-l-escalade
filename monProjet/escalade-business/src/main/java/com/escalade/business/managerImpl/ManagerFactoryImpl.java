@@ -10,7 +10,7 @@ public class ManagerFactoryImpl implements ManagerFactory {
 
 	private EspacePretManager espacePretManager;
 	public EspacePretManager getEspacePretManager() {return this.espacePretManager;}
-	public void setEspace_de_pretManager(EspacePretManager espacePretManager) {this.espacePretManager = espacePretManager;}
+	public void setEspacePretManager(EspacePretManager espacePretManager) {this.espacePretManager = espacePretManager;}
 
 	private PublicationManager publicationManager;
 	public PublicationManager getPublicationManager() {return this.publicationManager;}

@@ -10,7 +10,7 @@ and open the template in the editor.
 
 .titrage {
     
-    margin-top: -43%;
+    margin-top: -100%;
     margin-left:65%;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: bold;
@@ -41,8 +41,8 @@ and open the template in the editor.
 
 }
 
-.span12{
-    margin-top: 0%;
+.para{
+    margin-top: -55%;
 }
 
 

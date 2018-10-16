@@ -8,7 +8,7 @@ public interface ManagerFactory {
 
     EspacePretManager getEspacePretManager();
 
-    void setEspace_de_pretManager(EspacePretManager espacepretManager);
+    void setEspacePretManager(EspacePretManager espacepretManager);
 
     PublicationManager getPublicationManager();
 
