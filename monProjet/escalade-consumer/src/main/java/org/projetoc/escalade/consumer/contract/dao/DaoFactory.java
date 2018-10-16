@@ -4,7 +4,7 @@ public interface DaoFactory {
 	
 	CommentaireDao getCommentaireDao();
 	
-	Espace_de_PretDao getEspace_de_PretDao();
+	EspacePretDao getEspacePretDao();
 	    
     PublicationDao getPublicationDao();
     

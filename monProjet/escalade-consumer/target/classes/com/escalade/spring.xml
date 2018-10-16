@@ -1,90 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-
 <beans xmlns="http://www.springframework.org/schema/beans"
-
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- ===== Dao declaration ===== -->
+    <bean id="commentaireDao" class="org.projetoc.escalade.consumer.impl.dao.CommentaireDaoImpl"/>
+    <bean id="utilisateurDao" class="org.projetoc.escalade.consumer.impl.dao.UtilisateurDaoImpl"/>
+    <bean id="espacePretDao" class="org.projetoc.escalade.consumer.impl.dao.EspacePretDaoImpl"/>
+    <bean id="publicationDao" class="org.projetoc.escalade.consumer.impl.dao.PublicationDaoImpl"/>
+    <bean id="secteurDao" class="org.projetoc.escalade.consumer.impl.dao.SecteurDaoImpl"/>
+    <bean id="sitesDao" class="org.projetoc.escalade.consumer.impl.dao.SitesDaoImpl"/>
+    <bean id="voiesDao" class="org.projetoc.escalade.consumer.impl.dao.VoiesDaoImpl"/>
+    <bean id="topoDao" class="org.projetoc.escalade.consumer.impl.dao.TopoDaoImpl"/>
 
 
-
-    <bean id="utilisateurDAO"
-              class="org.projetoc.escalade.consumer.impl.dao.UtilisateurDaoImpl">
-
-        <property name="dataSource" ref="dataSource" />
-
+    <!-- ===== DaoFactory ===== -->
+    <bean id="daoFactory" class="org.projetoc.escalade.consumer.impl.dao.DaoFactoryImpl">
+        <property name="commentaireDao" ref="commentaireDao"/>
+        <property name="utilisateurDao" ref="utilisateurDao"/>
+        <property name="espacePretDao" ref="espacePretDao"/>
+        <property name="publicationDao" ref="publicationDao"/>
+        <property name="secteurDao" ref="secteurDao"/>
+        <property name="sitesDao" ref="sitesDao"/>
+        <property name="voiesDao" ref="voiesDao"/>
+        <property name="topoDao" ref="topoDao"/>
     </bean>
 
-    <bean id="commentaireDAO"
-              class="org.projetoc.escalade.consumer.impl.dao.CommentaireDaoImpl">
-
-        <property name="dataSource" ref="dataSource" />
-
+    <!-- ==== AbstractDao ===== -->
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="targetClass" value="org.projetoc.escalade.consumer.impl.dao.AbstractDaoImpl"/>
+        <property name="targetMethod" value="setDataSource"/>
+        <property name="arguments" ref="dataSourceEscalade"/>
     </bean>
-
-    <bean id="espace_de_pretDAO"
-              class="org.projetoc.escalade.consumer.impl.dao.Espace_de_PretDaoImpl">
-
-        <property name="dataSource" ref="dataSource" />
-
-    </bean>
-
-
-
-    <bean id="publicationDAO"
-              class="org.projetoc.escalade.consumer.impl.dao.PublicationDaoImpl">
-
-        <property name="dataSource" ref="dataSource" />
-
-    </bean>
-
-
-    <bean id="secteurDAO"
-              class="org.projetoc.escalade.consumer.impl.dao.SecteurDaoImpl">
-
-        <property name="dataSource" ref="dataSource" />
-
-    </bean>
-
-    <bean id="sitesDAO"
-              class="org.projetoc.escalade.consumer.impl.dao.SitesDaoImpl">
-
-        <property name="dataSource" ref="dataSource" />
-
-    </bean>
-
-
-    <bean id="topoDAO"
-              class="org.projetoc.escalade.consumer.impl.dao.TopoDaoImpl">
-
-        <property name="dataSource" ref="dataSource" />
-
-    </bean>
-
-    <bean id="voiesDAO"
-              class="org.projetoc.escalade.consumer.impl.dao.VoiesDaoImpl">
-
-        <property name="dataSource" ref="dataSource" />
-
-    </bean>
-
-
-    <bean id="dataSource"
-              class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-
-        <property name="driverClassName"
-                          value="org.postgresql.Driver" />
-
-        <property name="url"
-                          value="jdbc:postgresql://localhost:5432/ESCALADE" />
-
-        <property name="username" value="postgres" />
-
-        <property name="password" value="root" />
-
-    </bean>
-
-
-
 </beans>

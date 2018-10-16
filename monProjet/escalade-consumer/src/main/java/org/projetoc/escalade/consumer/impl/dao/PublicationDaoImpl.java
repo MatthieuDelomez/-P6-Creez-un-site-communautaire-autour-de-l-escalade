@@ -16,10 +16,10 @@ import RowMapper.UtilisateurMapper;
 
 public class PublicationDaoImpl extends AbstractDaoImpl implements PublicationDao {
 
-	@Override
+
 	public void addPublication(Publication publication) {
 		
-		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+		JdbcTemplate jdbcTemplate = new JdbcTemplate();
 
 		String sql = "INSERT INTO publication (titre, description, date_maj, pseudo) VALUES (?,?,?,?)";
 	
@@ -35,11 +35,11 @@ public class PublicationDaoImpl extends AbstractDaoImpl implements PublicationDa
 
 }
 
-	@Override
+
 	public Publication getPublication(Publication publication) {
 		String sql = "SELECT * FROM publication WHERE date_maj = ?";
 
-		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+		JdbcTemplate jdbcTemplate = new JdbcTemplate();
 		
 		Object[] args = new Object[] {
 				 publication.getDate_maj()
@@ -58,19 +58,19 @@ public class PublicationDaoImpl extends AbstractDaoImpl implements PublicationDa
 
 	}
 
-	@Override
+
 	public void deletePublicationPicture(Publication publication) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
+
 	public void updatePublication(Publication publication) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
+
 	public void deletePublication(Publication publication) {
 		// TODO Auto-generated method stub
 

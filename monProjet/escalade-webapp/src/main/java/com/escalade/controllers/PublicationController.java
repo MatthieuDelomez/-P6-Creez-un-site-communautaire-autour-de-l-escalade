@@ -2,7 +2,6 @@ package com.escalade.controllers;
 
 import org.springframework.stereotype.Controller;
 
-import com.escalde.manager.PublicationManager;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller

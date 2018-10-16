@@ -6,13 +6,13 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import org.projetoc.escalade.model.Espace_de_Pret;
+import org.projetoc.escalade.model.EspacePret;
 
 
-public class EspacePretMapper implements RowMapper<Espace_de_Pret>{
+public class EspacePretMapper implements RowMapper<EspacePret>{
 
-	public Espace_de_Pret mapRow(ResultSet rs, int rowNum) throws SQLException {
-		Espace_de_Pret pret = new Espace_de_Pret();
+	public EspacePret mapRow(ResultSet rs, int rowNum) throws SQLException {
+		EspacePret pret = new EspacePret();
 		pret.setId_pret(rs.getInt("id_pret"));
 		pret.setDate_de_location(rs.getString("date_de_location"));
 		pret.setPseudo_proprio(rs.getString("pseudo_proprio"));

@@ -8,7 +8,7 @@
     <!-- ==== Resource JNDI===== -->
 
 <bean id="dataSourceEscalade" class="org.springframework.jndi.JndiObjectFactoryBean">
-    <property name="jndiName" value="java:comp/env/jdbc/ESCALADE"/>
+    <property name="jndiName" value="java:comp/env/jdbc/Escalade"/>
 </bean>
 
     <!-- ==== AbstractResource ===== -->

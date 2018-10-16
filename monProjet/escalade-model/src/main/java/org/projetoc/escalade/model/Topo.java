@@ -14,7 +14,7 @@ public class Topo {
 	
 	
 	public Topo(String ref, String nom, String descriptif, String niveau_du_topo, String type_de_topo,
-			String titre_de_publication, boolean disponible, String nom_du_site, Espace_de_Pret louableouPas,
+			String titre_de_publication, boolean disponible, String nom_du_site, EspacePret louableouPas,
 			Sites nommage_du_site, Publication titrePubli) {
 		super();
 		this.ref = ref;

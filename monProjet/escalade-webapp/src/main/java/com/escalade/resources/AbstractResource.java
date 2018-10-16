@@ -1,13 +1,14 @@
 package com.escalade.resources;
 
 
-import com.escalade.managerImpl.ManagerFactoryImpl;
+import com.escalade.business.managerImpl.ManagerFactoryImpl;
 
 public class AbstractResource {
 
 	private static ManagerFactoryImpl managerFactory;
 
     protected static ManagerFactoryImpl getManagerFactory() {
+        System.out.println("--->>>> get manager factory : "+managerFactory);
         return managerFactory;
     }
 

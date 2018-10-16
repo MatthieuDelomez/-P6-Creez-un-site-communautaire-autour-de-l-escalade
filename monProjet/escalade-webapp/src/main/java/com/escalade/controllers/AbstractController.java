@@ -1,12 +1,13 @@
 package com.escalade.controllers;
 
-import com.escalade.managerImpl.ManagerFactoryImpl;
+import com.escalade.business.managerImpl.ManagerFactoryImpl;
 
 public abstract class AbstractController {
 
     private static ManagerFactoryImpl managerFactory;
 
     protected static ManagerFactoryImpl getManagerFactory() {
+        System.out.println("----->>> test manager "+managerFactory);
         return managerFactory;
     }
 

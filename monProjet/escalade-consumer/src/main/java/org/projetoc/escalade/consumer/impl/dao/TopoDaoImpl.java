@@ -20,7 +20,7 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDao {
 	@Override
 	public void addTopo(Topo topo) {
 
-		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+		JdbcTemplate jdbcTemplate = new JdbcTemplate();
 
 		String sql = "INSERT INTO topo (ref, nom, descriptif, niveau_du_topo, type_de_topo, nom_du_site) VALUES (?,?,?,?,?,?)";
 
@@ -41,7 +41,7 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDao {
 
 		String sql = "SELECT * FROM topo WHERE niveau_du_topo = ?";
 
-		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+		JdbcTemplate jdbcTemplate = new JdbcTemplate();
 		Object[] args = new Object[] { topo.getNiveau_du_topo() };
 
 		try {
@@ -62,6 +62,7 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDao {
      */
         @Override
 	public List<Topo> getAllTopo() {
+            /*
 
 		String sql = "SELECT * FROM topo";
 
@@ -74,7 +75,9 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDao {
 		} catch (EmptyResultDataAccessException exception) {
 			System.out.println("Incorrect");
 			return null;
-		}
+		}*/
+            
+            return null;
 
 	}
 
@@ -97,5 +100,3 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDao {
 	}
 
 }
-
-

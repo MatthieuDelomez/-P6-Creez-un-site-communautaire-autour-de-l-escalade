@@ -24,9 +24,9 @@ public class CommentaireDaoImpl extends AbstractDaoImpl implements CommentaireDa
 	}
 
 
-	@Override
+
 	public void addCommentaire(Commentaire commentaire) {
-		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+		JdbcTemplate jdbcTemplate = new JdbcTemplate();
 
 		String sql = "INSERT INTO commentaire (id, titre, pseudo, publicationId,  createdAt) VALUES (?, ?, ?, ?, ?)";
 
@@ -41,12 +41,11 @@ public class CommentaireDaoImpl extends AbstractDaoImpl implements CommentaireDa
 
 	}
 
-	@Override
 	public Commentaire getCommentaire(Commentaire commentaire) {
 
 		String sql = "SELECT * FROM commentaire WHERE pseudo = ?";
 
-		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+		JdbcTemplate jdbcTemplate = new JdbcTemplate();
 
 		Object[] args = new Object[] { commentaire.getPseudo() };
 
@@ -62,19 +61,16 @@ public class CommentaireDaoImpl extends AbstractDaoImpl implements CommentaireDa
 
 	}
 
-	@Override
 	public void deleteCommentairePicture(Commentaire commentaire) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
 	public void updateCommentaire(Commentaire commentaire) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
 	public void deleteCommentaire(Commentaire commentaire) {
 		// TODO Auto-generated method stub
 

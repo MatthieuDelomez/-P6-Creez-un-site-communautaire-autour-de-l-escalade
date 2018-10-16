@@ -1,21 +1,26 @@
 package com.escalade.controllers;
 
+import com.escalade.resources.AbstractResource;
+import com.escalde.business.manager.TopoManager;
+import java.util.List;
+import org.projetoc.escalade.model.Topo;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 
-import com.escalde.manager.TopoManager;
 import org.springframework.web.bind.annotation.RequestMapping;
-@Controller
-public class TopoController extends AbstractController {
-    
-    	// private TopoManager topoManager = getManagerFactory().getTopoManager();
+import org.springframework.web.servlet.ModelAndView;
 
-    
-                   @RequestMapping("/topo")
-                   public String topo(){
-                       
-                   //    topoManager.getAllTopo();
-                       
-                       return "jsp/topo";
-                   }
-	
+@Controller
+public class TopoController extends AbstractResource {
+
+    private final TopoManager topoManager = getManagerFactory().getTopoManager();
+
+    @RequestMapping("/topo")
+    public ModelAndView topo(ModelMap modelMap) {
+        System.out.println("---->>> get all topo");
+        
+        modelMap.addAttribute("topoList", topoManager.getAllTopo());
+        return new ModelAndView("topo", "topo", new Topo());
+    }
+
 }

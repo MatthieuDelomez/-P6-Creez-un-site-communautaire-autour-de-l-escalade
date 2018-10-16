@@ -11,7 +11,7 @@ public class HomeController  {
 	public String welcome() {
 		
             System.out.println("------->>>>> tonux text");
-		return "jsp/login";
+		return "login";
 		
 	}
 	

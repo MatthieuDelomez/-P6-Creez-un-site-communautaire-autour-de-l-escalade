@@ -3,7 +3,7 @@ package org.projetoc.escalade.consumer;
 import java.util.Date;
 
 import org.projetoc.escalade.consumer.contract.dao.CommentaireDao;
-import org.projetoc.escalade.consumer.contract.dao.Espace_de_PretDao;
+import org.projetoc.escalade.consumer.contract.dao.EspacePretDao;
 import org.projetoc.escalade.consumer.contract.dao.PublicationDao;
 import org.projetoc.escalade.consumer.contract.dao.SecteurDao;
 import org.projetoc.escalade.consumer.contract.dao.SitesDao;
@@ -11,7 +11,7 @@ import org.projetoc.escalade.consumer.contract.dao.TopoDao;
 import org.projetoc.escalade.consumer.contract.dao.UtilisateurDao;
 import org.projetoc.escalade.consumer.contract.dao.VoiesDao;
 import org.projetoc.escalade.model.Commentaire;
-import org.projetoc.escalade.model.Espace_de_Pret;
+import org.projetoc.escalade.model.EspacePret;
 import org.projetoc.escalade.model.Publication;
 import org.projetoc.escalade.model.Secteur;
 import org.projetoc.escalade.model.Sites;
@@ -169,13 +169,13 @@ public class App {
 		
 		/* Récuperer Espace de Pret */
 
-		Espace_de_PretDao espace_de_pretDao = ctx.getBean("espace_de_pretDAO", Espace_de_PretDao.class);
+		EspacePretDao espace__pretDao = ctx.getBean("espace_de_pretDAO", EspacePretDao.class);
 
-		Espace_de_Pret pret = new Espace_de_Pret();
+		EspacePret pret = new EspacePret();
 
 		pret.setDisponible(true);
 
-		Espace_de_Pret pret1 = espace_de_pretDao.getEspace_de_Pret(pret);
+		//EspacePret pret1 = espace__pretDao.getEspace_de_Pret(pret);
 
 		System.out.println(pret.toString());
 
@@ -189,7 +189,7 @@ public class App {
 		pret.setDisponible(true);
 		pret.setRef("Topo02");;
 
-		espace_de_pretDao.addEspace_de_Pret(pret);
+		//espace__pretDao.addEspace_de_Pret(pret);
 
 		
 

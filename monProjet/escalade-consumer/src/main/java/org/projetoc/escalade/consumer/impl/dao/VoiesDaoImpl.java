@@ -1,17 +1,12 @@
 package org.projetoc.escalade.consumer.impl.dao;
 
-import java.sql.Types;
-
 import org.projetoc.escalade.consumer.contract.dao.VoiesDao;
-import org.projetoc.escalade.model.Espace_de_Pret;
 import org.projetoc.escalade.model.Voies;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 
-import RowMapper.EspacePretMapper;
 import RowMapper.VoiesMapper;
 
 public class VoiesDaoImpl extends AbstractDaoImpl implements VoiesDao {
@@ -19,7 +14,7 @@ public class VoiesDaoImpl extends AbstractDaoImpl implements VoiesDao {
 	@Override
 	public void addVoies(Voies voies) {
 		
-		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+		JdbcTemplate jdbcTemplate = new JdbcTemplate();
 
 		String sql = "INSERT INTO voies ( nom_voies, nom_secteur, nom_du_site) VALUES (?,?,?);";
 
@@ -38,7 +33,7 @@ public class VoiesDaoImpl extends AbstractDaoImpl implements VoiesDao {
 	public Voies getVoies(Voies voies) {
 		String sql = "SELECT * FROM voies WHERE nom_voies = ?";
 
-		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+		JdbcTemplate jdbcTemplate = new JdbcTemplate();
 
 		Object[] args = new Object[] { voies.getNom_voies() };
 

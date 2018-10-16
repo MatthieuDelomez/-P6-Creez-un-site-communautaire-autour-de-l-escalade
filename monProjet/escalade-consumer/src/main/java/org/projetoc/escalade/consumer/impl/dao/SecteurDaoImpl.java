@@ -1,17 +1,12 @@
 package org.projetoc.escalade.consumer.impl.dao;
 
-import java.sql.Types;
-
 import org.projetoc.escalade.consumer.contract.dao.SecteurDao;
-import org.projetoc.escalade.model.Espace_de_Pret;
 import org.projetoc.escalade.model.Secteur;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 
-import RowMapper.EspacePretMapper;
 import RowMapper.SecteurMapper;
 
 public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDao {
@@ -19,7 +14,7 @@ public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDao {
 	@Override
 	public void addSecteur(Secteur secteur) {
 
-		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+		JdbcTemplate jdbcTemplate = new JdbcTemplate();
 
 		String sql = "INSERT INTO secteur (nom_secteur, nom_du_site) VALUES (?,?)";
 
@@ -38,7 +33,7 @@ public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDao {
 	public Secteur getSecteur(Secteur secteur) {
 		String sql = "SELECT * FROM secteur WHERE nom_secteur = ?";
 
-		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+		JdbcTemplate jdbcTemplate = new JdbcTemplate();
 
 		Object[] args = new Object[] { secteur.getNom_secteur() };
 

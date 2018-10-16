@@ -1,22 +1,22 @@
-C:\Users\Ben Gourion\Downloads\monProjet\escalade-business\src\main\java\com\escalade\managerImpl\SitesManagerImpl.java
-C:\Users\Ben Gourion\Downloads\monProjet\escalade-business\src\main\java\com\escalde\manager\UtilisateurFactory.java
-C:\Users\Ben Gourion\Downloads\monProjet\escalade-business\src\main\java\com\escalde\manager\ManagerFactory.java
-C:\Users\Ben Gourion\Downloads\monProjet\escalade-business\src\main\java\com\escalade\managerImpl\SecteurManagerImpl.java
-C:\Users\Ben Gourion\Downloads\monProjet\escalade-business\src\main\java\com\escalade\managerImpl\Espace_de_PretManagerImpl.java
-C:\Users\Ben Gourion\Downloads\monProjet\escalade-business\src\main\java\com\escalade\managerImpl\PublicationManagerImpl.java
-C:\Users\Ben Gourion\Downloads\monProjet\escalade-business\src\main\java\com\escalde\manager\SecteurManager.java
-C:\Users\Ben Gourion\Downloads\monProjet\escalade-business\src\main\java\com\escalade\managerImpl\VoiesManagerImpl.java
-C:\Users\Ben Gourion\Downloads\monProjet\escalade-business\src\main\java\com\escalde\manager\TopoManager.java
-C:\Users\Ben Gourion\Downloads\monProjet\escalade-business\src\main\java\com\escalde\manager\UtilisateurManager.java
-C:\Users\Ben Gourion\Downloads\monProjet\escalade-business\src\main\java\com\escalade\managerImpl\CommentaireManagerImpl.java
-C:\Users\Ben Gourion\Downloads\monProjet\escalade-business\src\main\java\com\escalade\managerImpl\AbstractManager.java
-C:\Users\Ben Gourion\Downloads\monProjet\escalade-business\src\main\java\com\escalde\manager\VoiesManager.java
-C:\Users\Ben Gourion\Downloads\monProjet\escalade-business\src\main\java\org\projetoc\escalade\business\App.java
-C:\Users\Ben Gourion\Downloads\monProjet\escalade-business\src\main\java\com\escalde\manager\Espace_de_PretManager.java
-C:\Users\Ben Gourion\Downloads\monProjet\escalade-business\src\main\java\com\escalde\manager\CommentaireManager.java
-C:\Users\Ben Gourion\Downloads\monProjet\escalade-business\src\main\java\com\escalde\manager\PublicationManager.java
-C:\Users\Ben Gourion\Downloads\monProjet\escalade-business\src\main\java\com\escalade\managerImpl\UtilisateurFactoryImpl.java
-C:\Users\Ben Gourion\Downloads\monProjet\escalade-business\src\main\java\com\escalade\managerImpl\UtilisateurManagerImpl.java
-C:\Users\Ben Gourion\Downloads\monProjet\escalade-business\src\main\java\com\escalade\managerImpl\ManagerFactoryImpl.java
-C:\Users\Ben Gourion\Downloads\monProjet\escalade-business\src\main\java\com\escalade\managerImpl\TopoManagerImpl.java
-C:\Users\Ben Gourion\Downloads\monProjet\escalade-business\src\main\java\com\escalde\manager\SitesManager.java
+/Users/macbookpro/Documents/openclassroom/mathieu/p6/test/-P6-Creez-un-site-communautaire-autour-de-l-escalade/monProjet/escalade-business/src/main/java/com/escalade/business/managerImpl/AbstractManager.java
+/Users/macbookpro/Documents/openclassroom/mathieu/p6/test/-P6-Creez-un-site-communautaire-autour-de-l-escalade/monProjet/escalade-business/src/main/java/com/escalde/business/manager/SecteurManager.java
+/Users/macbookpro/Documents/openclassroom/mathieu/p6/test/-P6-Creez-un-site-communautaire-autour-de-l-escalade/monProjet/escalade-business/src/main/java/com/escalade/business/managerImpl/ManagerFactoryImpl.java
+/Users/macbookpro/Documents/openclassroom/mathieu/p6/test/-P6-Creez-un-site-communautaire-autour-de-l-escalade/monProjet/escalade-business/src/main/java/com/escalade/business/managerImpl/UtilisateurFactoryImpl.java
+/Users/macbookpro/Documents/openclassroom/mathieu/p6/test/-P6-Creez-un-site-communautaire-autour-de-l-escalade/monProjet/escalade-business/src/main/java/com/escalde/business/manager/UtilisateurFactory.java
+/Users/macbookpro/Documents/openclassroom/mathieu/p6/test/-P6-Creez-un-site-communautaire-autour-de-l-escalade/monProjet/escalade-business/src/main/java/com/escalade/business/managerImpl/TopoManagerImpl.java
+/Users/macbookpro/Documents/openclassroom/mathieu/p6/test/-P6-Creez-un-site-communautaire-autour-de-l-escalade/monProjet/escalade-business/src/main/java/com/escalde/business/manager/SitesManager.java
+/Users/macbookpro/Documents/openclassroom/mathieu/p6/test/-P6-Creez-un-site-communautaire-autour-de-l-escalade/monProjet/escalade-business/src/main/java/com/escalade/business/managerImpl/CommentaireManagerImpl.java
+/Users/macbookpro/Documents/openclassroom/mathieu/p6/test/-P6-Creez-un-site-communautaire-autour-de-l-escalade/monProjet/escalade-business/src/main/java/org/projetoc/escalade/business/App.java
+/Users/macbookpro/Documents/openclassroom/mathieu/p6/test/-P6-Creez-un-site-communautaire-autour-de-l-escalade/monProjet/escalade-business/src/main/java/com/escalde/business/manager/TopoManager.java
+/Users/macbookpro/Documents/openclassroom/mathieu/p6/test/-P6-Creez-un-site-communautaire-autour-de-l-escalade/monProjet/escalade-business/src/main/java/com/escalade/business/managerImpl/EspacePretManagerImpl.java
+/Users/macbookpro/Documents/openclassroom/mathieu/p6/test/-P6-Creez-un-site-communautaire-autour-de-l-escalade/monProjet/escalade-business/src/main/java/com/escalde/business/manager/CommentaireManager.java
+/Users/macbookpro/Documents/openclassroom/mathieu/p6/test/-P6-Creez-un-site-communautaire-autour-de-l-escalade/monProjet/escalade-business/src/main/java/com/escalde/business/manager/PublicationManager.java
+/Users/macbookpro/Documents/openclassroom/mathieu/p6/test/-P6-Creez-un-site-communautaire-autour-de-l-escalade/monProjet/escalade-business/src/main/java/com/escalade/business/managerImpl/PublicationManagerImpl.java
+/Users/macbookpro/Documents/openclassroom/mathieu/p6/test/-P6-Creez-un-site-communautaire-autour-de-l-escalade/monProjet/escalade-business/src/main/java/com/escalde/business/manager/UtilisateurManager.java
+/Users/macbookpro/Documents/openclassroom/mathieu/p6/test/-P6-Creez-un-site-communautaire-autour-de-l-escalade/monProjet/escalade-business/src/main/java/com/escalde/business/manager/EspacePretManager.java
+/Users/macbookpro/Documents/openclassroom/mathieu/p6/test/-P6-Creez-un-site-communautaire-autour-de-l-escalade/monProjet/escalade-business/src/main/java/com/escalde/business/manager/VoiesManager.java
+/Users/macbookpro/Documents/openclassroom/mathieu/p6/test/-P6-Creez-un-site-communautaire-autour-de-l-escalade/monProjet/escalade-business/src/main/java/com/escalade/business/managerImpl/UtilisateurManagerImpl.java
+/Users/macbookpro/Documents/openclassroom/mathieu/p6/test/-P6-Creez-un-site-communautaire-autour-de-l-escalade/monProjet/escalade-business/src/main/java/com/escalade/business/managerImpl/SitesManagerImpl.java
+/Users/macbookpro/Documents/openclassroom/mathieu/p6/test/-P6-Creez-un-site-communautaire-autour-de-l-escalade/monProjet/escalade-business/src/main/java/com/escalade/business/managerImpl/VoiesManagerImpl.java
+/Users/macbookpro/Documents/openclassroom/mathieu/p6/test/-P6-Creez-un-site-communautaire-autour-de-l-escalade/monProjet/escalade-business/src/main/java/com/escalde/business/manager/ManagerFactory.java
+/Users/macbookpro/Documents/openclassroom/mathieu/p6/test/-P6-Creez-un-site-communautaire-autour-de-l-escalade/monProjet/escalade-business/src/main/java/com/escalade/business/managerImpl/SecteurManagerImpl.java

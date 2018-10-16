@@ -1,17 +1,12 @@
 package org.projetoc.escalade.consumer.impl.dao;
 
-import java.sql.Types;
-
 import org.projetoc.escalade.consumer.contract.dao.SitesDao;
-import org.projetoc.escalade.model.Espace_de_Pret;
 import org.projetoc.escalade.model.Sites;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 
-import RowMapper.EspacePretMapper;
 import RowMapper.SitesMapper;
 
 public class SitesDaoImpl extends AbstractDaoImpl implements SitesDao {
@@ -19,7 +14,7 @@ public class SitesDaoImpl extends AbstractDaoImpl implements SitesDao {
 	@Override
 	public void addSites(Sites sites) {
 		
-		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+		JdbcTemplate jdbcTemplate = new JdbcTemplate();
 
 		String sql = "INSERT INTO sites (nom_du_site, nombre_de_secteur) VALUES (?, ?);";
 
@@ -38,7 +33,7 @@ public class SitesDaoImpl extends AbstractDaoImpl implements SitesDao {
 	public Sites getSites(Sites sites) {
 		String sql = "SELECT * FROM sites WHERE nom_du_site = ?";
 
-		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+		JdbcTemplate jdbcTemplate = new JdbcTemplate();
 
 		Object[] args = new Object[] { sites.getNom_du_site() };
 
