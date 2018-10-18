@@ -15,6 +15,8 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 
 import RowMapper.CommentaireMapper;
 import RowMapper.UtilisateurMapper;
+import java.util.List;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 
 public class CommentaireDaoImpl extends AbstractDaoImpl implements CommentaireDao {
 
@@ -60,6 +62,9 @@ public class CommentaireDaoImpl extends AbstractDaoImpl implements CommentaireDa
 		}
 
 	}
+        
+        
+
 
 	public void deleteCommentairePicture(Commentaire commentaire) {
 		// TODO Auto-generated method stub

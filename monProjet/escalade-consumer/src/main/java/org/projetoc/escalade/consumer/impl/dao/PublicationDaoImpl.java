@@ -13,10 +13,12 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 
 import RowMapper.PublicationMapper;
 import RowMapper.UtilisateurMapper;
+import java.util.List;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 
 public class PublicationDaoImpl extends AbstractDaoImpl implements PublicationDao {
 
-
+@Override
 	public void addPublication(Publication publication) {
 		
 		JdbcTemplate jdbcTemplate = new JdbcTemplate();
@@ -35,7 +37,7 @@ public class PublicationDaoImpl extends AbstractDaoImpl implements PublicationDa
 
 }
 
-
+@Override
 	public Publication getPublication(Publication publication) {
 		String sql = "SELECT * FROM publication WHERE date_maj = ?";
 
@@ -57,19 +59,44 @@ public class PublicationDaoImpl extends AbstractDaoImpl implements PublicationDa
 		}
 
 	}
+        
+                @Override
+        	public List<Publication> getAllPublication() {
+            
+			System.out.println("Entree4Pub");
 
+                                     String sql = "SELECT * FROM publication";
+
+		JdbcTemplate jdbcTemplate = getJdbcTemplate();
+
+		try {
+			List<Publication> publicationQuery = jdbcTemplate.query(sql,
+			new BeanPropertyRowMapper(Publication.class));
+			return publicationQuery;
+
+		} catch (EmptyResultDataAccessException exception) {
+			System.out.println("Incorrect");
+			return null;
+		}
+            
+
+	}
+
+@Override
 
 	public void deletePublicationPicture(Publication publication) {
 		// TODO Auto-generated method stub
 
 	}
 
+@Override
 
 	public void updatePublication(Publication publication) {
 		// TODO Auto-generated method stub
 
 	}
 
+@Override
 
 	public void deletePublication(Publication publication) {
 		// TODO Auto-generated method stub

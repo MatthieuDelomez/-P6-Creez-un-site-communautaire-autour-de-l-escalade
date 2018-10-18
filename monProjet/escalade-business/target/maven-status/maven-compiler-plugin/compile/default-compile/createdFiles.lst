@@ -3,7 +3,6 @@ com\escalade\business\managerImpl\EspacePretManagerImpl.class
 com\escalde\business\manager\PublicationManager.class
 com\escalade\business\managerImpl\CommentaireManagerImpl.class
 org\projetoc\escalade\business\App.class
-com\escalde\business\manager\UtilisateurFactory.class
 com\escalade\business\managerImpl\VoiesManagerImpl.class
 com\escalde\business\manager\TopoManager.class
 com\escalade\business\managerImpl\SitesManagerImpl.class
@@ -11,7 +10,6 @@ com\escalade\business\managerImpl\PublicationManagerImpl.class
 com\escalde\business\manager\SitesManager.class
 com\escalade\business\managerImpl\UtilisateurManagerImpl.class
 com\escalde\business\manager\ManagerFactory.class
-com\escalade\business\managerImpl\UtilisateurFactoryImpl.class
 com\escalade\business\managerImpl\AbstractManager.class
 com\escalde\business\manager\UtilisateurManager.class
 com\escalade\business\managerImpl\TopoManagerImpl.class

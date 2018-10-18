@@ -7,7 +7,7 @@
             
             <bean id = "utilisateurManager" class="com.escalade.business.managerImpl.UtilisateurManagerImpl"></bean>
             <bean id = "commentaireManager" class="com.escalade.business.managerImpl.CommentaireManagerImpl"></bean>
-            <bean id = "espacepretManager" class="com.escalade.business.managerImpl.EspacePretManagerImpl"></bean>
+            <bean id = "espacePretManager" class="com.escalade.business.managerImpl.EspacePretManagerImpl"></bean>
             <bean id = "publicationManager" class="com.escalade.business.managerImpl.PublicationManagerImpl"></bean>
             <bean id = "secteurManager" class="com.escalade.business.managerImpl.SecteurManagerImpl"></bean>
             <bean id = "sitesManager" class="com.escalade.business.managerImpl.SitesManagerImpl"></bean>
@@ -17,7 +17,7 @@
             <bean id= "managerFactory" class="com.escalade.business.managerImpl.ManagerFactoryImpl">
             <property name="utilisateurManager" ref="utilisateurManager"></property> 
             <property name="commentaireManager" ref="commentaireManager"></property>  
-            <property name="espacepretManager" ref="espacepretManager"></property>
+           <property name="espacePretManager" ref="espacePretManager"></property>
             <property name="publicationManager" ref="publicationManager"></property>
             <property name="secteurManager" ref="secteurManager"></property>
             <property name="sitesManager" ref="sitesManager"></property>

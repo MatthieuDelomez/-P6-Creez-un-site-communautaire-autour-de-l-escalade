@@ -31,18 +31,18 @@
 </head>
 
 
-
+         <c:forEach var="publication" items="${publicationList}">
+           
+           <p><c:out value="${publication.pseudo}"/></p>
+           
+       </c:forEach>
 
 <body>
     
        <%@ include file="_include/header.jsp"%>
        
  
-       <c:forEach var="topo" items="${ topoList }">
-           
-           <p><c:out value="${ topo.description }"/></p>
-           
-       </c:forEach>
+
 
     <!-- Page Header -->
     <header class="masthead" style="background-image: url('resources/img/topo01.jpg')">
@@ -52,7 +52,7 @@
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
               <h1>Topo</h1>
-              <span class="subheading">Guide de la r�gion</span>
+              <span class="subheading">Guide de la région</span>
             </div>
           </div>
         </div>
@@ -66,8 +66,13 @@
           <div class="post-preview">
             <a href="${pageContext.request.contextPath}/postopo">
               <h2 class="post-title">
-               Topo du diable
+       <c:forEach var="topo" items="${topoList}">
+           
+           <p><c:out value="${topo.nom}"/></p>
+           
+       </c:forEach>
               </h2>
+              
               <h3 class="post-subtitle">
                 Topo du diable explicite dans son titre quasi impossible
               </h3>

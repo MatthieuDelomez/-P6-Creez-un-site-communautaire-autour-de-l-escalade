@@ -1,17 +1,44 @@
-<%-- 
-    Document   : publication
-    Created on : 6 oct. 2018, 16:59:19
-    Author     : Ben Gourion
---%>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+ <link rel="stylesheet" href="resources/css/style.css">
+<div class="commentaire">
+	<div class="comment">
+		<h3>Publication</h3>
+	</div>
+    
+    <div class="row">
+    
+    <div class="col-md-6">
+          <div class="widget-area no-padding blank">
+                 <div class="status-upload">
+    
+                     <form>
+                         <textarea placeholder="Post Ur Comment !" >
+                            
+                  <c:forEach var="publication" items="${publicationList}">
+           
+           <p><c:out value="${publication.titre}"/></p>
+           
+       </c:forEach>
+
+                         </textarea>
+	          <ul>
+	                   <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Audio"><i class="fa fa-music"></i></a></li>
+		<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Video"><i class="fa fa-video-camera"></i></a></li>
+		<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Sound Record"><i class="fa fa-microphone"></i></a></li>
+		<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Picture"><i class="fa fa-picture-o"></i></a></li>
+	          </ul>
+	
+                        <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Share</button>
+									</form>
+								</div><!-- Status Upload  -->
+							</div><!-- Widget Area -->
+						</div>
+        
+        
+        
+    </div>
+</div>

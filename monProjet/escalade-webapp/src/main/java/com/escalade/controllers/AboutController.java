@@ -5,6 +5,7 @@
  */
 package com.escalade.controllers;
 
+import com.escalde.business.manager.TopoManager;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -15,10 +16,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class AboutController extends AbstractController {
     
+    
     @RequestMapping("/about")
     public String about(){
         
-        return "jsp/about";
+        return "about";
     }
     
 }

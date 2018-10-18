@@ -2,7 +2,6 @@ D:\OP\Site Escalade\P6\monProjet\escalade-business\src\main\java\com\escalde\bus
 D:\OP\Site Escalade\P6\monProjet\escalade-business\src\main\java\com\escalade\business\managerImpl\ManagerFactoryImpl.java
 D:\OP\Site Escalade\P6\monProjet\escalade-business\src\main\java\com\escalade\business\managerImpl\AbstractManager.java
 D:\OP\Site Escalade\P6\monProjet\escalade-business\src\main\java\com\escalade\business\managerImpl\TopoManagerImpl.java
-D:\OP\Site Escalade\P6\monProjet\escalade-business\src\main\java\com\escalde\business\manager\UtilisateurFactory.java
 D:\OP\Site Escalade\P6\monProjet\escalade-business\src\main\java\com\escalde\business\manager\VoiesManager.java
 D:\OP\Site Escalade\P6\monProjet\escalade-business\src\main\java\com\escalde\business\manager\SitesManager.java
 D:\OP\Site Escalade\P6\monProjet\escalade-business\src\main\java\com\escalade\business\managerImpl\SitesManagerImpl.java
@@ -12,7 +11,6 @@ D:\OP\Site Escalade\P6\monProjet\escalade-business\src\main\java\com\escalade\bu
 D:\OP\Site Escalade\P6\monProjet\escalade-business\src\main\java\com\escalade\business\managerImpl\CommentaireManagerImpl.java
 D:\OP\Site Escalade\P6\monProjet\escalade-business\src\main\java\com\escalde\business\manager\UtilisateurManager.java
 D:\OP\Site Escalade\P6\monProjet\escalade-business\src\main\java\com\escalade\business\managerImpl\EspacePretManagerImpl.java
-D:\OP\Site Escalade\P6\monProjet\escalade-business\src\main\java\com\escalade\business\managerImpl\UtilisateurFactoryImpl.java
 D:\OP\Site Escalade\P6\monProjet\escalade-business\src\main\java\com\escalde\business\manager\CommentaireManager.java
 D:\OP\Site Escalade\P6\monProjet\escalade-business\src\main\java\com\escalde\business\manager\PublicationManager.java
 D:\OP\Site Escalade\P6\monProjet\escalade-business\src\main\java\org\projetoc\escalade\business\App.java

@@ -74,7 +74,10 @@
       </div>
     </article>
     
-           <%@ include file="commentaire.jsp"%>
+           <%@ include file="publication.jsp"%>
+
+           
+           
 
 
 

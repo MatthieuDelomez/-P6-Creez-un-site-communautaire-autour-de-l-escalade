@@ -20,6 +20,9 @@ public class TopoController extends AbstractResource {
     public ModelAndView topo(ModelMap modelMap) {
         System.out.println("---->>> get all topo");
         
+       List<Topo> listTopos = topoManager.getAllTopo() ;
+                System.out.println("---->>> get all topo: " + listTopos.size());
+
         modelMap.addAttribute("topoList", topoManager.getAllTopo());
         return new ModelAndView("topo", "topo", new Topo());
     }

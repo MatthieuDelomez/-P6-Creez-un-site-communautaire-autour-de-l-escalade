@@ -14,7 +14,7 @@ public class PostopoController {
     @RequestMapping("/postopo")
     public String postopo(){
         
-        return "jsp/postopo";
+        return "postopo";
     }
     
 }

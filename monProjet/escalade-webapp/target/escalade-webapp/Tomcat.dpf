@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Context antiJARLocking="true" path="/escalade">
-  <Resource auth="Container" defaultAutoCommit="true" defaultTransactionIsolation="READ_COMMITTED" driverClassName="com.mysql.jdbc.Driver" initialSize="1" logAbandoned="true" maxIdle="10" maxTotal="30" maxWaitMillis="60000" minEvictableIdleTimeMillis="10000" minIdle="1" name="jdbc/ESCALADE" password="" removeAbandonedOnBorrow="true" removeAbandonedTimeout="60" testOnBorrow="true" testWhileIdle="true" timeBetweenEvictionRunsMillis="30000" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/ESCALADE" username="root" validationQuery="SELECT 1"/>
-</Context>
