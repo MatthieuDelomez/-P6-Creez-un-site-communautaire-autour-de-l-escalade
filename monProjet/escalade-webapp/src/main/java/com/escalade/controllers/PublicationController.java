@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class PublicationController extends AbstractResource {
+public class PublicationController extends AbstractResource  {
+    
+
     
       private final PublicationManager publicationManager = getManagerFactory().getPublicationManager();
 

@@ -1,6 +1,14 @@
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>${application.name}- A propos</title>
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="container">
@@ -12,7 +20,7 @@
                       <th colspan="7">
                         <span class="btn-group">
                             <a class="btn"><i class="icon-chevron-left"></i></a>
-                        	<a class="btn active">Août 2018</a>
+                        	<a class="btn active">Aout 2018</a>
                         	<a class="btn"><i class="icon-chevron-right"></i></a>
                         </span>
                       </th>
@@ -78,7 +86,7 @@
                 </tbody>
             </table>
                             <button type="submit" class="btn btn-primary"  href="${pageContext.request.contextPath}/login">
-                                <span class="glyphicon glyphicon-log-in"></span> Réserver Topo</button></a>
+                                <span class="glyphicon glyphicon-log-in"></span> RÃ©server Topo</button></a>
 
             
         </div>

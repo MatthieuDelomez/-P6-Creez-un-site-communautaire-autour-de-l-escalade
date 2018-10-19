@@ -22,8 +22,10 @@
 			
 				<li class="active"><a href="${pageContext.request.contextPath}/">Accueil</a></li>
 				<li><a href="${pageContext.request.contextPath}/login">Se connecter</a></li>
+                                                                             <li><a href="${pageContext.request.contextPath}/inscription">Inscription</a></li>
                                 		                   <li><a href="${pageContext.request.contextPath}/topo">Topo</a></li>
 				<li><a href="${pageContext.request.contextPath}/about">A propos</a></li>
+
 
 				
 			</ul>

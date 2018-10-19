@@ -33,6 +33,7 @@ public class DaoFactoryImpl implements DaoFactory {
 
 	private PublicationDao publicationDao;
 	public PublicationDao getPublicationDao() {
+                            System.out.println("---> publicationDao : "+publicationDao);
 		return publicationDao;
 	}
 

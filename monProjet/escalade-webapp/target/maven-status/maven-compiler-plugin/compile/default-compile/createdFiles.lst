@@ -9,7 +9,6 @@ com\escalade\controllers\AboutController.class
 com\escalade\controllers\CommentaireController.class
 com\escalade\controllers\HomeController.class
 com\escalade\controllers\UtilisateurController.class
-com\escalade\controllers\PostopoController.class
 com\escalade\controllers\VoiesController.class
 com\escalade\controllers\SitesController.class
 com\escalade\controllers\AccueilController.class

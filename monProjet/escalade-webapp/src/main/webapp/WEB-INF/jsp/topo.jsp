@@ -31,11 +31,6 @@
 </head>
 
 
-         <c:forEach var="publication" items="${publicationList}">
-           
-           <p><c:out value="${publication.pseudo}"/></p>
-           
-       </c:forEach>
 
 <body>
     
@@ -63,62 +58,24 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
+                <c:forEach var="topo" items="${topoList}">
           <div class="post-preview">
-            <a href="${pageContext.request.contextPath}/postopo">
-              <h2 class="post-title">
-       <c:forEach var="topo" items="${topoList}">
-           
-           <p><c:out value="${topo.nom}"/></p>
-           
-       </c:forEach>
-              </h2>
-              
-              <h3 class="post-subtitle">
-                Topo du diable explicite dans son titre quasi impossible
-              </h3>
-            </a>
-            <p class="post-meta">Niveau: 9c de type
-              Falaise</p>
-          </div>         
+            <a href="${pageContext.request.contextPath}/publication">
 
-            
-            
-          
-          
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Topo de la com�te
+                <h2 class="post-title">
+
+           <p><c:out value="${topo.nom}"/></p>
               </h2>
+
               <h3 class="post-subtitle">
-                Topo assez complexe regroupant plusieurs sites class�s
+           <p><c:out value="${topo.descriptif}"/></p>
               </h3>
             </a>
-            <p class="post-meta">Niveau: 5a � 8b de type
-              Bloc</p>
-          </div>
-          
-          
-          
-          
-          
-          
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Failure is not an option
-              </h2>
-              <h3 class="post-subtitle">
-                Many say exploration is part of our destiny, but it?s actually our duty to future generations.
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on July 8, 2018</p>
-          </div>
-          <hr>
+           <p>Type de topo : <c:out value="${topo.type_de_topo}"/></p>
+
+          </div>         
+              </c:forEach>
+
           
 
         </div>
