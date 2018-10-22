@@ -49,11 +49,11 @@ public class UtilisateurDaoImpl extends AbstractDaoImpl implements UtilisateurDa
 	@Override
 	public Utilisateur getUser(Utilisateur user) {
 
-		String sql = "SELECT * FROM utilisateur WHERE  pseudo= ?";
-		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+		String sql = "SELECT * FROM utilisateur WHERE  email = ? AND motpasse = ?";
+		JdbcTemplate jdbcTemplate = getJdbcTemplate();
 		
 		Object[] args = new Object[] {
-				 user.getPseudo()
+				 user.getEmail(), user.getMotPasse()
 		};
 
         

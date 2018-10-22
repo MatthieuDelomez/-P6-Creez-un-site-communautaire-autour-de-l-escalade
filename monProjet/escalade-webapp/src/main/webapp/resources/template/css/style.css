@@ -19,9 +19,16 @@ and open the template in the editor.
     
 }
 
+
+
 .footer{
     margin-top: 40%;
 }
+
+.topoBouton{
+    margin-left: 0%;
+}
+
 
 
 .about{
@@ -43,6 +50,10 @@ and open the template in the editor.
 
 .para{
     margin-top: -55%;
+}
+
+.pseudoPub{
+    font-size: 15px;
 }
 
 
@@ -180,11 +191,19 @@ margin-right: 7px;
 
 }
 
+.publication{
+    margin-left: 7.5%;
+}
+
 /*Fin du commentaire*/
 
 
 
-
+.navbar-collapse{
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 14.5px;
+    
+}
 
 .col-lg-8 {
     margin-left: 28%;
@@ -445,11 +464,12 @@ header.masthead .post-heading .subheading {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+
 header.masthead .post-heading .meta {
   font-size: 20px;
   font-weight: 300;
   font-style: italic;
-  font-family: 'Lora', 'Times New Roman', serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 header.masthead .post-heading .meta a {

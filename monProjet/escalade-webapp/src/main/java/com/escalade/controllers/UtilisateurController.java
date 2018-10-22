@@ -2,9 +2,11 @@ package com.escalade.controllers;
 
 import static com.escalade.controllers.AbstractController.getManagerFactory;
 import com.escalade.resources.AbstractResource;
+import com.escalde.business.manager.EspacePretManager;
 import com.escalde.business.manager.UtilisateurManager;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import org.projetoc.escalade.model.EspacePret;
 import org.projetoc.escalade.model.Utilisateur;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -55,5 +57,37 @@ public class UtilisateurController extends AbstractResource {
        return "inscription";
    }
    
+      @PostMapping("/login")
+        public String login (HttpServletRequest request){
+            
+            Utilisateur utilisateur = new Utilisateur();
+            utilisateur.setEmail(request.getParameter("email"));
+            utilisateur.setMotPasse(request.getParameter("motpasse"));
+            
+            HttpSession session = request.getSession();
+            
 
-}
+            
+                Utilisateur user = utilisateurManager.getUser(utilisateur);
+                if(user != null ){
+                    session.setAttribute("user", user);
+                    
+                   return "redirect:/";
+                    
+                }
+            return "redirect:/login";
+        }
+	
+        
+           @GetMapping("/login")
+   public String initLogin(HttpServletRequest request) {
+       HttpSession session = request.getSession();
+       if (session.getAttribute("user") != null) {
+           return "redirect:/";
+       }
+       return "login";
+   }
+   
+   
+
+  }

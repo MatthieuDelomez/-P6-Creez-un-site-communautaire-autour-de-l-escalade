@@ -17,9 +17,11 @@
 
 </head>
 
+       <%@ include file="WEB-INF/jsp/_include/header.jsp"%>
+
+
 <body>
     
-       <%@ include file="WEB-INF/jsp/_include/header.jsp"%>
        
         <section class="imageback">
         <div class="containerimage">

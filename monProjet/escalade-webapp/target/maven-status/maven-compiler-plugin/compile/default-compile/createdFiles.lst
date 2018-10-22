@@ -7,7 +7,6 @@ com\escalade\resources\AbstractResource.class
 com\escalade\controllers\PublicationController.class
 com\escalade\controllers\AboutController.class
 com\escalade\controllers\CommentaireController.class
-com\escalade\controllers\HomeController.class
 com\escalade\controllers\UtilisateurController.class
 com\escalade\controllers\VoiesController.class
 com\escalade\controllers\SitesController.class

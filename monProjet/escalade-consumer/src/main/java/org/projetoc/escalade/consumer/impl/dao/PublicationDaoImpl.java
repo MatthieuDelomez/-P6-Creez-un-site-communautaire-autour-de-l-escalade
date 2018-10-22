@@ -21,7 +21,7 @@ public class PublicationDaoImpl extends AbstractDaoImpl implements PublicationDa
 @Override
 	public void addPublication(Publication publication) {
 		
-		JdbcTemplate jdbcTemplate = new JdbcTemplate();
+		JdbcTemplate jdbcTemplate = getJdbcTemplate();
 
 		String sql = "INSERT INTO publication (titre, description, date_maj, pseudo) VALUES (?,?,?,?)";
 	
@@ -41,7 +41,7 @@ public class PublicationDaoImpl extends AbstractDaoImpl implements PublicationDa
 	public Publication getPublication(Publication publication) {
 		String sql = "SELECT * FROM publication WHERE date_maj = ?";
 
-		JdbcTemplate jdbcTemplate = new JdbcTemplate();
+		JdbcTemplate jdbcTemplate = getJdbcTemplate();
 		
 		Object[] args = new Object[] {
 				 publication.getDate_maj()

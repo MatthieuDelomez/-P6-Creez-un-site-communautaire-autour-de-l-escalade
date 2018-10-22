@@ -21,7 +21,7 @@ public class TopoDaoImpl extends AbstractDaoImpl implements TopoDao {
 	@Override
 	public void addTopo(Topo topo) {
 
-		JdbcTemplate jdbcTemplate = new JdbcTemplate();
+		JdbcTemplate jdbcTemplate = getJdbcTemplate();
 
 		String sql = "INSERT INTO topo (ref, nom, descriptif, niveau_du_topo, type_de_topo, nom_du_site) VALUES (?,?,?,?,?,?)";
 

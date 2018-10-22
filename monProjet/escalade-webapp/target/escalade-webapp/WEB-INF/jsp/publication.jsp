@@ -55,8 +55,11 @@
     </header>
     
     
-                          <%@ include file="espace_de_pret.jsp"%>
-
+    
+        <div class="topoBouton">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary"<span class="glyphicon glyphicon-log-in"></span><a href="${pageContext.request.contextPath}/espace_de_pret"> Réserver un Topo</button>
+            </div></div>
 
     <!-- Post Content -->
     <article>
@@ -82,45 +85,40 @@
     </article>
     
 
-           
-          <link rel="stylesheet" href="resources/css/style.css">
-<div class="commentaire">
+    <!-- Changer le formulaire ==> Ajouter simplement paragraphe -->
+    <div class="commentaire">
 	<div class="comment">
 		<h3>Publication</h3>
-	</div>
+        </div></div>
     
-    <div class="row">
     
-    <div class="col-md-6">
-                   <c:forEach var="publication" items="${publicationList}">
-
-          <div class="widget-area no-padding blank">
-
-                 <div class="status-upload">
-
-                     <form>
-                         <textarea placeholder="Post Ur Comment !" >
-           <c:out value="${publication.description}"/>
-
-                         </textarea>
-	          <ul>
-	                   <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Audio"><i class="fa fa-music"></i></a></li>
-		<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Video"><i class="fa fa-video-camera"></i></a></li>
-		<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Sound Record"><i class="fa fa-microphone"></i></a></li>
-		<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Picture"><i class="fa fa-picture-o"></i></a></li>
-	          </ul>
-	
-                      
-									</form>
-								</div><!-- Status Upload  -->
-							</div><!-- Widget Area -->               </c:forEach>
-
-						</div>
+      <article>
+ <div class="row">
+                        <c:forEach var="publication" items="${publicationList}">
 
 
-        
-    </div>
-</div>
+    
+    <div class="publication">
+            
+          <div class="col-lg-8 col-md-10 mx-auto">
+              
+              
+              
+            <p> <div class="pseudoPub">
+                Message écrit par : <c:out value="${publication.pseudo}"/>
+            </div>
+                <br>
+                <c:out value="${publication.description}"/>
+                                 
+            </p>
+
+         
+          </div>
+        </div> 
+      </div></c:forEach>
+    </article>
+           
+   
           
           
               <div class="row">
@@ -131,8 +129,9 @@
 
                  <div class="status-upload">
 
-                     <form>
-                         <textarea placeholder="Post Ur Comment !" >
+                     <form method="post" action="publication">
+                                         <input type="text" class="form-control" name="titre" id="titre" placeholder="Enter titre" value="Titrage" />
+                         <textarea name="description" placeholder="Post Ur publication !" >
 
                          </textarea>
 	          <ul>
