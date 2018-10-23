@@ -4,13 +4,15 @@ INSERT INTO public.utilisateur(
 pseudo,
 nom,
 prenom,
-email
+email,
+motpasse
 )
 
 VALUES(
 
-'Dalton01',
+'Dalton02',
 'Dalton',
-'Avrel',
-'AvrelD01@gmail.com'
+'Joe',
+'JoeD02@gmail.com',
+'password'
 );

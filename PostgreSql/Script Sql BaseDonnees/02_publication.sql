@@ -6,8 +6,8 @@ pseudo
 )
 
 VALUES
-('Petit message à la communauté',
- 'Hello juste un petit coucou pour vous souhaiter la bonne chance',
- '14/08/2018',
- 'Dalton01' );
+('test en base pour script',
+ 'Hello un petit coucou de pg pour un test en database',
+ '23/10/2018',
+ 'Dalton02' );
 
