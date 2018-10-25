@@ -39,6 +39,7 @@ public class Espace_de_pretController extends AbstractResource {
        espacePret.setPseudo_proprio(request.getParameter("pseudo_proprio" ));
 
 
+
               
               espacePretManager.addEspacePret(espacePret);
 

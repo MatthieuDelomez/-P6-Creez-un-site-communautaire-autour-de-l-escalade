@@ -173,7 +173,6 @@ public class App {
 
 		EspacePret pret = new EspacePret();
 
-		pret.setDisponible(true);
 
 		//EspacePret pret1 = espace__pretDao.getEspace_de_Pret(pret);
 
@@ -183,10 +182,8 @@ public class App {
 		
 		/* Creer Espace de Pret */
 
-		pret.setId_pret(2);
 		pret.setDate_de_location("Du 15/09/18 au 20/10/18");
 		pret.setPseudo_proprio("Macaronade");
-		pret.setDisponible(true);
 		pret.setRef("Topo02");;
 
 		//espace__pretDao.addEspace_de_Pret(pret);

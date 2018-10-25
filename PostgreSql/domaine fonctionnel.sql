@@ -43,11 +43,8 @@ CREATE TABLE public.utilisateur (
 
 
 CREATE TABLE public.espace_de_pret (
-                id_pret INTEGER NOT NULL,
                 date_de_location VARCHAR(150) NOT NULL,
-                disponible BOOLEAN NOT NULL,
-                pseudo_proprio VARCHAR(25) NOT NULL,
-                CONSTRAINT espace_de_pret_pk PRIMARY KEY (id_pret)
+                pseudo_proprio VARCHAR(25) NOT NULL
 );
 
 

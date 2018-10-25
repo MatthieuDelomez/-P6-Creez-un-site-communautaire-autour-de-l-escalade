@@ -55,11 +55,18 @@
     </header>
     
     
+    <!--Bouton pour reserver le topo   -->
     
-        <div class="topoBouton">
+        <div class="topoBouton"> 
             <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-primary"<span class="glyphicon glyphicon-log-in"></span><a href="${pageContext.request.contextPath}/espace_de_pret"> Réserver un Topo</button>
-            </div></div>
+                   <a href="${pageContext.request.contextPath}/espace_de_pret"> 
+                        <button type="submit" class="btn btn-primary" 
+                              <span class="glyphicon glyphicon-log-in"></span>  Réserver un Topo</button>
+            </div>
+               </div>
+                   </a> 
+                
+                
 
     <!-- Post Content -->
     <article>
@@ -83,23 +90,22 @@
         </div>
       </div>
     </article>
-    
 
-    <!-- Changer le formulaire ==> Ajouter simplement paragraphe -->
-    <div class="commentaire">
-	<div class="comment">
-		<h3>Publication</h3>
-        </div></div>
+          <!-- Importation des publications dans la base de donnée sous forme de liste -->
+          
+      <div class="commentaire">
+            <div class="comment">
+                   <h3>Publication</h3>
+     </div></div>
     
     
       <article>
  <div class="row">
-                        <c:forEach var="publication" items="${publicationList}">
+               <c:forEach var="publication" items="${publicationList}">
 
 
     
-    <div class="publication">
-            
+    <div class="publication">            
           <div class="col-lg-8 col-md-10 mx-auto">
               
               
@@ -119,7 +125,7 @@
     </article>
            
    
-          
+          <!-- Formulaire Publication -->
           
               <div class="row">
     

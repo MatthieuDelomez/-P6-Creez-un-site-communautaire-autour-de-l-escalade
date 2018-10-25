@@ -27,7 +27,7 @@
 	
 	
 	<!-- Formulaire -->
-<div class="container">
+<div class="louerTopo">
     <h1>Louer un Topo</h1>
 
     <form method="post" action="espace_de_pret" class="form-horizontal">
