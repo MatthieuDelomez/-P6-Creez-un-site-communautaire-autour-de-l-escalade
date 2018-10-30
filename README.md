@@ -1,10 +1,6 @@
 # -P6-Creez-un-site-communautaire-autour-de-l-escalade =======
 
-Prerequisites: <br>
-Java jdk 1.8
-Java jdk 9.0
-Spring
-Apache Maven
+
 
 1. Téléchargez ou clonez le projet via Github
 
@@ -22,5 +18,14 @@ Utiliser Maven pour installer les dépendances
 mvn clean compile
 
 Naviguez avec votre navigateur à l'adresse suivant http://localhost:8084/
+
+
+Prerequisites: <br>
+Java jdk 1.8 <br>
+Java jdk 9.0<br>
+Spring<br>
+Apache Maven<br>
+
+
 
 ##Réalisé sur NetBeans|France 2018
