@@ -4,7 +4,7 @@
 
 1. Téléchargez ou clonez le projet via Github
 
-2. Déployez le domaine fonctionnel qui se situe dans le fichier PostgreSql
+2. Déployez le domaine fonctionnel qui se situe dans le dossier PostgreSql
 
 3. Exécutez les scripts Sql dans l'ordre de la numérotation
 
@@ -25,7 +25,6 @@ Naviguez avec votre navigateur à l'adresse suivant http://localhost:8084/
 
 Prerequisites: <br>
 Java jdk 1.8 <br>
-Java jdk 9.0<br>
 Spring<br>
 Apache Maven<br>
 
