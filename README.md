@@ -1,4 +1,4 @@
-# -P6-Creez-un-site-communautaire-autour-de-l-escalade =======
+# -P6-Creez-un-site-communautaire-autour-de-l-escalade =============================================
 
 
 
@@ -23,7 +23,6 @@ mvn clean compile
 Naviguez avec votre navigateur à l'adresse suivant http://localhost:8084/
 <br>
 <br>
-<br>
 
 Prerequisites: <br>
 Java jdk 1.8 <br>
@@ -31,7 +30,6 @@ Java jdk 9.0<br>
 Spring<br>
 Apache Maven<br>
 
-<br>
 <br>
 <br>
 
