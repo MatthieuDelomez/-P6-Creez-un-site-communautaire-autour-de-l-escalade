@@ -15,7 +15,7 @@
 6. Lancer le module "web-app"
 <br>
 <br>
-Utiliser Maven pour installer les dépendances
+Utiliser Maven pour installer les dépendances<br>
 mvn clean compile
 <br>
 <br>
