@@ -1,6 +1,6 @@
 # -P6-Creez-un-site-communautaire-autour-de-l-escalade =======
 
-Prerequisites
+Prerequisites: <br>
 Java jdk 1.8
 Java jdk 9.0
 Spring
