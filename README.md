@@ -1,4 +1,4 @@
-# -P6-Creez-un-site-communautaire-autour-de-l-escalade =============================================
+# -P6-Creez-un-site-communautaire-autour-de-l-escalade =======================================
 
 
 
@@ -13,7 +13,6 @@
 5. Configurez votre serveur local
 
 6. Lancer le module "web-app"
-<br>
 <br>
 <br>
 Utiliser Maven pour installer les dépendances
