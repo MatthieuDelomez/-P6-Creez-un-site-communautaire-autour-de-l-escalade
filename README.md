@@ -1,29 +1,26 @@
 # -P6-Creez-un-site-communautaire-autour-de-l-escalade =======
 
-Les Acteurs:
+Prerequisites
+Java jdk 1.8
+Java jdk 9.0
+Spring
+Apache Maven
 
-1 - L'utilisateur, correspond à chaque visiteur du site web, il pourra consulter les topo
-en ligne, laisser un commentaire en s'enregistrant en choississant un pseudo et email,
-effectuer une recherche multi-critères, louer un topo si le topo en question est disponible
-et partager différentes informations sur les sites, secteurs et voies.
+1. Téléchargez ou clonez le projet via Github
 
-2 - L'administrateur, sera en charge de corriger d'eventuelles erreurs de fonctionnement,
-mettre à jour le site internet si besoin, actualiser les topo à louer et non dispnible, 
-présenter les différents topo via une page type et ainsi veiller à la bonne ergonomie du 
-site.
+2. Déployez le domaine fonctionnel qui se situe dans le fichier PostgreSql
 
+3. Exécutez les scripts Sql dans l'ordre de la numérotation
 
-Les cas d'utilisations:
+4. Importez le projet dans l'environnement de développement de votre choix
 
-1 - Consulter les topo en ligne, l'utilisateur pourra s'informer sur les différents topo
-qui existent avec les sites et secteurs qu'ils couvrent avec sa difficulté.
+5. Configurez votre serveur local
 
-2 - Laisser un commentaire, l'utilisateur pourra laisser une trace écrite sur son expérience
-une fois l'utilisateur enregistré.
+6. Lancer le module "web-app"
 
-3 - Présenter les topo qui existent, avec une petite description du site et une photo retraçant 
-le parcours.
+Utiliser Maven pour installer les dépendances
+mvn clean compile
 
-4 - Avoir un espace de prêt pour chaque topo, qui sera présente sur la page et qui renverra 
-à l'historique de prêt pour savoir si le topo est dispobible ou pas.
+Naviguez avec votre navigateur à l'adresse suivant http://localhost:8084/
 
+##Réalisé sur NetBeans|France 2018
