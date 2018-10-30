@@ -13,12 +13,17 @@
 5. Configurez votre serveur local
 
 6. Lancer le module "web-app"
-
+<br>
+<br>
+<br>
 Utiliser Maven pour installer les dépendances
 mvn clean compile
-
+<br>
+<br>
 Naviguez avec votre navigateur à l'adresse suivant http://localhost:8084/
-
+<br>
+<br>
+<br>
 
 Prerequisites: <br>
 Java jdk 1.8 <br>
@@ -26,6 +31,8 @@ Java jdk 9.0<br>
 Spring<br>
 Apache Maven<br>
 
-
+<br>
+<br>
+<br>
 
 ##Réalisé sur NetBeans|France 2018
