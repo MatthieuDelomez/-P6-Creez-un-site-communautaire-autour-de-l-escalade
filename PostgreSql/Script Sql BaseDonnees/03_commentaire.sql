@@ -8,7 +8,7 @@ createdAt
 
 VALUES
 
-(3, 'test en base pour script',
-'Dalton02', 3, '23/10/18'
+(1, 'test en base pour script',
+'Dalton02', 1, '23/10/18'
 );
  
