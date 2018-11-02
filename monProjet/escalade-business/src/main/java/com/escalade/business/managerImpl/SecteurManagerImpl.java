@@ -4,7 +4,15 @@ import org.projetoc.escalade.model.Secteur;
 
 import com.escalde.business.manager.SecteurManager;
 
+/*
+Creation de la classe SecteurManagerImpl qui implemente l'interface SecteurManager
+*/
+
 public class SecteurManagerImpl extends AbstractManager implements SecteurManager{
+    
+                   /*
+                   Implementation des methodes
+                   */
 
 	@Override
 	public void addSecteur(Secteur secteur) {

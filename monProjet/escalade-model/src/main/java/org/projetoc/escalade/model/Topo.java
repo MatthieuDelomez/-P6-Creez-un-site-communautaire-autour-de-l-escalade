@@ -1,7 +1,12 @@
 package org.projetoc.escalade.model;
 
-public class Topo {
+/*
+Création des models: JavaBeans manipulés par l'application
+*/
 
+public class Topo {
+    
+	/*Variables correspondant aux colonnes de la table Topo*/
 	private String ref;
 	private String nom;
 	private String descriptif;
@@ -12,7 +17,7 @@ public class Topo {
 	private Sites nommage_du_site;
 	private Publication TitrePubli;
 	
-	
+        	/*Constructeur du model Sites Définition des variables*/
 	public Topo(String ref, String nom, String descriptif, String niveau_du_topo, String type_de_topo,
 			String titre_de_publication, boolean disponible, String nom_du_site, EspacePret louableouPas,
 			Sites nommage_du_site, Publication titrePubli) {
@@ -31,6 +36,8 @@ public class Topo {
 		super();
 	}
 
+        
+                   /* Création des Getters et Setters avec l'option Refactor*/
 	public String getRef() {
 		return ref;
 	}

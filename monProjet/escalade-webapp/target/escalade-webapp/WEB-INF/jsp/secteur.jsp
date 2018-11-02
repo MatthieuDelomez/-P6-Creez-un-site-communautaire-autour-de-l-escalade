@@ -1,8 +1,4 @@
-<%-- 
-    Document   : secteur
-    Created on : 6 oct. 2018, 17:00:32
-    Author     : Ben Gourion
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

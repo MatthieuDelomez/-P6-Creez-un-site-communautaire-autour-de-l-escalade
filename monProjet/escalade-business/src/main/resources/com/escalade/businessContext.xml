@@ -4,6 +4,8 @@
 	xsi:schemaLocation="
             http://www.springframework.org/schema/beans
             http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+            <!-- Déclaration des Managers de l'application -->
             
             <bean id = "utilisateurManager" class="com.escalade.business.managerImpl.UtilisateurManagerImpl"></bean>
             <bean id = "commentaireManager" class="com.escalade.business.managerImpl.CommentaireManagerImpl"></bean>
@@ -14,16 +16,20 @@
             <bean id = "topoManager" class="com.escalade.business.managerImpl.TopoManagerImpl"></bean>
             <bean id = "voiesManager" class="com.escalade.business.managerImpl.VoiesManagerImpl"></bean>
             
+            <!-- ManagerFactory -->
+
             <bean id= "managerFactory" class="com.escalade.business.managerImpl.ManagerFactoryImpl">
             <property name="utilisateurManager" ref="utilisateurManager"></property> 
             <property name="commentaireManager" ref="commentaireManager"></property>  
-           <property name="espacePretManager" ref="espacePretManager"></property>
+            <property name="espacePretManager" ref="espacePretManager"></property>
             <property name="publicationManager" ref="publicationManager"></property>
             <property name="secteurManager" ref="secteurManager"></property>
             <property name="sitesManager" ref="sitesManager"></property>
             <property name="topoManager" ref="topoManager"></property>
             <property name="voiesManager" ref="voiesManager"></property>
             </bean>
+            
+           <!-- AbstractResources -->
             
             <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
             <property name="targetClass" value="com.escalade.business.managerImpl.AbstractManager"/>

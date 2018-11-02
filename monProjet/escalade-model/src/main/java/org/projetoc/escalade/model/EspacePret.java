@@ -1,9 +1,12 @@
 package org.projetoc.escalade.model;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+/*
+Création des models: JavaBeans manipulés par l'application
+*/
 
 public class EspacePret {
+
+                   /*Variables correspondant aux colonnes de la table EspacePret*/
 
 	private String date_de_location;
 	private String pseudo_proprio;
@@ -11,7 +14,7 @@ public class EspacePret {
 
 
 	
-
+	/*Constructeur du model EspacePret | Définition des variables*/
 	public EspacePret(int id_pret , boolean disponible, String date_de_location, String pseudo_proprio ) {
 		super();
 		this.date_de_location = date_de_location;
@@ -19,17 +22,20 @@ public class EspacePret {
 		this.ref = ref;
 	}
 
-	public String getRef() {
+
+	public EspacePret() {
+
+	super();
+	}
+        
+                   
+                   /* Création des Getters et Setters avec l'option Refactor*/
+        	public String getRef() {
 		return ref;
 	}
 
 	public void setRef(String ref) {
 		this.ref = ref;
-	}
-
-	public EspacePret() {
-
-	super();
 	}
 
 	public String getDate_de_location() {

@@ -13,6 +13,5 @@ public class VoiesController extends AbstractController {
         return ("jsp/voies");
     }
 	
-	//private VoiesManager voiesManager = getManagerFactory().getVoiesManager();
 
 }

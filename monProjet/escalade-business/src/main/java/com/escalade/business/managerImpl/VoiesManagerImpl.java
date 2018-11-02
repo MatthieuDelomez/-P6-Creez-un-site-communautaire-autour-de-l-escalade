@@ -4,7 +4,15 @@ import org.projetoc.escalade.model.Voies;
 
 import com.escalde.business.manager.VoiesManager;
 
+/*
+Creation de la classe VoiesManagerImpl qui implemente l'interface VoiesManager
+*/
+
 public class VoiesManagerImpl extends AbstractManager implements VoiesManager {
+    
+                   /*
+                   Implementation des methodes
+                   */
 
 	@Override
 	public void addVoies(Voies voies) {

@@ -2,10 +2,17 @@ package com.escalade.business.managerImpl;
 
 import org.projetoc.escalade.model.Utilisateur;
 
-
 import com.escalde.business.manager.UtilisateurManager;
 
+/*
+Creation de la classe UtilisateurManagerImpl qui implemente l'interface UtilisateurManager
+*/
+
 public class UtilisateurManagerImpl extends AbstractManager implements UtilisateurManager {
+    
+                   /*
+                   Implementation des methodes
+                   */
 
 	@Override
 	public void addUser(Utilisateur user) {

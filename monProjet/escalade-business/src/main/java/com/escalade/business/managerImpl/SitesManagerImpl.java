@@ -4,7 +4,15 @@ import org.projetoc.escalade.model.Sites;
 
 import com.escalde.business.manager.SitesManager;
 
+/*
+Creation de la classe SitesManagerImpl qui implemente l'interface SitesManager
+*/
+
 public class SitesManagerImpl extends AbstractManager implements SitesManager{
+    
+                   /*
+                   Implementation des methodes
+                   */
 
 	@Override
 	public void addSites(Sites sites) {

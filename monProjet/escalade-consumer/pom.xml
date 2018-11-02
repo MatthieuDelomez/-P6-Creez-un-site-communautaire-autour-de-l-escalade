@@ -39,17 +39,12 @@
             <version>4.0.2.RELEASE</version>
         </dependency>
 
-        <!-- <dependency>
-                <groupId>org.postgresql</groupId>
-                <artifactId>postgresql</artifactId>
-                <version>42.1.1</version>
-        </dependency>-->
-                
-<dependency>
-    <groupId>org.postgresql</groupId>
-    <artifactId>postgresql</artifactId>
-    <version>9.4.1211</version>
-</dependency>
+        <!-- Drivers JDBC PostgreSQL -->
+         <dependency>
+         <groupId>org.postgresql</groupId>
+         <artifactId>postgresql</artifactId>
+         <version>9.4.1211</version>
+         </dependency>
 
 
         <dependency>

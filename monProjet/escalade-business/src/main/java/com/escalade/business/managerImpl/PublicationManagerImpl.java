@@ -5,8 +5,15 @@ import org.projetoc.escalade.model.Publication;
 import com.escalde.business.manager.PublicationManager;
 import java.util.List;
 
+/*
+Creation de la classe PublicationManagerImpl qui implemente l'interface PublicationManager
+*/
+
 public class PublicationManagerImpl extends AbstractManager implements PublicationManager{
 
+                   /*
+                   Implementation des methodes
+                   */
 	
 	public void addPublication(Publication publication) {
 		getDaoFactory().getPublicationDao().addPublication(publication);
@@ -18,11 +25,6 @@ public class PublicationManagerImpl extends AbstractManager implements Publicati
 
 	}
 
-                    public List<Publication> getAllPublication() {
-        
-                                      System.out.println("---->>> manager getAllPublication");
-                                      return getDaoFactory().getPublicationDao().getAllPublication();
-                   }
         
 	public void deletePublicationPicture(Publication publication) {
 		getDaoFactory().getPublicationDao().deletePublicationPicture(publication);
@@ -39,5 +41,12 @@ public class PublicationManagerImpl extends AbstractManager implements Publicati
 		getDaoFactory().getPublicationDao().deletePublication(publication);
 		
 	}
+        
+                   /* Implementation de la methode liste des publications /*/
+        
+                   public List<Publication> getAllPublication() {
+                                      System.out.println("---->>> manager getAllPublication");
+                                      return getDaoFactory().getPublicationDao().getAllPublication();
+                   }
 
 }

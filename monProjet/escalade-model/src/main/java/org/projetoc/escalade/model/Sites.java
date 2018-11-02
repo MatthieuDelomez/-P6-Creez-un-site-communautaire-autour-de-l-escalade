@@ -1,11 +1,16 @@
 package org.projetoc.escalade.model;
 
+/*
+Création des models: JavaBeans manipulés par l'application
+*/
+
 public class Sites {
 
+                   /*Variables correspondant aux colonnes de la table Sites*/
 	private String nom_du_site;
 	private int nombre_de_secteur;
 
-	
+	/*Constructeur du model Sites Définition des variables*/
 	public Sites(String nom_du_site, int nombre_de_secteur) {
 		super();
 		this.nom_du_site = nom_du_site;
@@ -16,7 +21,8 @@ public class Sites {
 
 	super();
 	}
-
+        
+                   /* Création des Getters et Setters avec l'option Refactor*/
 	public String getNom_du_site() {
 		return nom_du_site;
 	}

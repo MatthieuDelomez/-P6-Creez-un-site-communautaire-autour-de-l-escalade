@@ -13,6 +13,5 @@ public class SecteurController extends AbstractController{
          return "jsp/secteur";
      }
 	
-	//private SecteurManager secteurManager = getManagerFactory().getSecteurManager();
 
 }

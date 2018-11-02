@@ -10,7 +10,13 @@ import org.projetoc.escalade.consumer.contract.dao.TopoDao;
 import org.projetoc.escalade.consumer.contract.dao.UtilisateurDao;
 import org.projetoc.escalade.consumer.contract.dao.VoiesDao;
 
+/*
+Pattern Dao pour éxécuter les requêtes Sql avec Spring JDBC
+*/
+
 public class DaoFactoryImpl implements DaoFactory {
+    
+                   /* Implémentation des méthodes se trouvant dans l'interface DaoFactory */
 
 	private CommentaireDao commentaireDao;
 	public CommentaireDao getCommentaireDao() {
@@ -33,7 +39,8 @@ public class DaoFactoryImpl implements DaoFactory {
 
 	private PublicationDao publicationDao;
 	public PublicationDao getPublicationDao() {
-                            System.out.println("---> publicationDao : "+publicationDao);
+                                      /* Log console*/
+                                       System.out.println("---> publicationDao : "+publicationDao);
 		return publicationDao;
 	}
 
@@ -65,7 +72,8 @@ public class DaoFactoryImpl implements DaoFactory {
 
 	private TopoDao topoDao;
 	public TopoDao getTopoDao() {
-                System.out.println("---> topoDao : "+topoDao);
+                                      /* Log console*/
+                                      System.out.println("---> topoDao : "+topoDao);
 		return topoDao;
 	}
 

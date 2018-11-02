@@ -1,7 +1,5 @@
 package org.projetoc.escalade.consumer.impl.dao;
 
-import java.sql.Types;
-
 import javax.sql.DataSource;
 
 import org.projetoc.escalade.consumer.contract.dao.UtilisateurDao;
@@ -10,42 +8,43 @@ import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
-
 import RowMapper.UtilisateurMapper;
+
+/*
+Pattern Dao pour éxécuter les requêtes Sql avec Spring JDBC
+*/
 
 public class UtilisateurDaoImpl extends AbstractDaoImpl implements UtilisateurDao {
 	
+                   /* Variable DataSource*/
 	private DataSource dataSource;
-
-
-
-	/*Ajouter dans la abase*/
-	@Override
+        
+                   /* Méthode pour ajouter un Utilisateur*/
+                   /*Classe hérité de la classe Parente AbstractDaoImpl*/
+                  @Override
 	public void addUser(Utilisateur user) {
 
 		JdbcTemplate jdbcTemplate =  getJdbcTemplate();
+                                      /* Nom des colonnes se situant dans table de la base de données*/
 		String sql = "INSERT INTO utilisateur (pseudo, nom, prenom, email, motpasse) VALUES (?,?,?,?,?);";
 		
 	Object[] args = new Object[] {user.getPseudo(),user.getNom(),user.getPrenom(),user.getEmail(), user.getMotPasse()};
 		
         
-        try {
-            jdbcTemplate.update(sql, args);
-        } catch (DuplicateKeyException exception) {
-            System.out.println(exception.getMessage());
-        }
+                                       try {
+                                             jdbcTemplate.update(sql, args);
+                                       } catch (DuplicateKeyException exception) {
+                                            System.out.println(exception.getMessage());
+                             }
 
 
-	}
-
+	          }
+ 
 
 	
 
-	/*SELECT ++> Queryforobject
-	 * Recuperer l'information dans la base de donnees 
-	 * */
-	
+                   /* Méthode pour récupérer un Utilisateur*/
+                   /*Classe hérité de la classe Parente AbstractDaoImpl*/
 	@Override
 	public Utilisateur getUser(Utilisateur user) {
 
@@ -56,9 +55,11 @@ public class UtilisateurDaoImpl extends AbstractDaoImpl implements UtilisateurDa
 				 user.getEmail(), user.getMotPasse()
 		};
 
+                
         
         try {
             RowMapper<Utilisateur> rowMapper = new UtilisateurMapper();
+            /*Appel de la méthode QueryForObject*/
             Utilisateur userQuery = jdbcTemplate.queryForObject(sql, args, rowMapper);
             return userQuery;
 

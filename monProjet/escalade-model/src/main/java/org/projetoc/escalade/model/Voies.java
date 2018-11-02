@@ -1,7 +1,11 @@
 package org.projetoc.escalade.model;
 
+/*
+Création des models: JavaBeans manipulés par l'application
+*/
 public class Voies {
 
+                   /*Variables correspondant aux colonnes de la table Voies*/
 	private String nom_voies;
 	private String nom_secteur;
 	private String nom_du_site;
@@ -9,7 +13,7 @@ public class Voies {
 	private Secteur nom_du_secteur;
 	private Sites nom_site;
 
-	
+	/*Constructeur du model Voies Définition des variables*/
 	public Voies(String nom_voies, String nom_secteur, String nom_du_site, Secteur nom_du_secteur, Sites nom_site) {
 		super();
 		this.nom_voies = nom_voies;
@@ -23,7 +27,8 @@ public class Voies {
 
 	super();
 	}
-
+        
+                   /* Création des Getters et Setters avec l'option Refactor*/
 	public String getNom_voies() {
 		return nom_voies;
 	}

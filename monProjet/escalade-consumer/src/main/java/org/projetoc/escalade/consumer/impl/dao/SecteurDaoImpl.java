@@ -6,16 +6,21 @@ import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-
 import RowMapper.SecteurMapper;
 
-public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDao {
+/*
+Pattern Dao pour éxécuter les requêtes Sql avec Spring JDBC
+*/
 
-	@Override
+public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDao {
+    
+                   /* Méthode pour ajouter un secteur */
+
+	@Override /*Classe hérité de la classe Parente AbstractDaoImpl*/
 	public void addSecteur(Secteur secteur) {
 
 		JdbcTemplate jdbcTemplate = new JdbcTemplate();
-
+                                      /* Nom des colonnes se situant dans table de la base de données*/
 		String sql = "INSERT INTO secteur (nom_secteur, nom_du_site) VALUES (?,?)";
 
 		Object[] args = new Object[] { secteur.getNom_secteur(), secteur.getNom_du_site()};
@@ -29,8 +34,11 @@ public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDao {
 		
 	}
 
-	@Override
+                   /* Méthode pour récuperer un secteur */
+        
+	@Override /*Classe hérité de la classe Parente AbstractDaoImpl*/
 	public Secteur getSecteur(Secteur secteur) {
+            
 		String sql = "SELECT * FROM secteur WHERE nom_secteur = ?";
 
 		JdbcTemplate jdbcTemplate = new JdbcTemplate();
@@ -39,6 +47,7 @@ public class SecteurDaoImpl extends AbstractDaoImpl implements SecteurDao {
 
 		try {
 			RowMapper<Secteur> rowMapper = new SecteurMapper();
+                                                          /* Appel à la méthode QueryForObject */
 			Secteur secteurQuery = jdbcTemplate.queryForObject(sql, args, rowMapper);
 			return secteurQuery;
 

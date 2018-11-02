@@ -1,16 +1,21 @@
 package org.projetoc.escalade.model;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/*
+Création des models: JavaBeans manipulés par l'application
+*/
+
 public class Commentaire {
+    
+                   /*Variables correspondant aux colonnes de la table Commentaire*/
 
 	private int id;
 	private String pseudo;
 	private int publicationId;
 	private String titre;
 	
-	
+	/*Constructeur du model Commentaire | Définition des variables*/
 	public Commentaire(int id, String pseudo, int publicationId, String titre, Date createdAt) {
 		super();
 		this.id = id;
@@ -26,6 +31,8 @@ public class Commentaire {
 	}
 	
 	
+                   /* Création des Getters et Setters avec l'option Refactor*/
+        
 	public int getId() {
 		return id;
 	}

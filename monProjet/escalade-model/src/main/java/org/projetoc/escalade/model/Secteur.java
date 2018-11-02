@@ -1,13 +1,17 @@
 package org.projetoc.escalade.model;
 
+/*
+Création des models: JavaBeans manipulés par l'application
+*/
+
 public class Secteur {
 
+                   /*Variables correspondant aux colonnes de la table Secteur*/
 	private String nom_secteur;
 	private String nom_du_site;
-
 	private Sites nameSecteur;
 
-	
+	/*Constructeur du model secteur | Définition des variables*/
 	public Secteur(String nom_secteur, String nom_du_site, Sites nameSecteur) {
 		super();
 		this.nom_secteur = nom_secteur;
@@ -19,7 +23,9 @@ public class Secteur {
 
 	super();
 	}
-
+        
+        
+                   /* Création des Getters et Setters avec l'option Refactor*/
 	public String getNom_secteur() {
 		return nom_secteur;
 	}

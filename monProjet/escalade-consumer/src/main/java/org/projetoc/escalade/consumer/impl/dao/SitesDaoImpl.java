@@ -6,16 +6,21 @@ import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-
 import RowMapper.SitesMapper;
 
-public class SitesDaoImpl extends AbstractDaoImpl implements SitesDao {
+/*
+Pattern Dao pour éxécuter les requêtes Sql avec Spring JDBC
+*/
 
-	@Override
+public class SitesDaoImpl extends AbstractDaoImpl implements SitesDao {
+    
+                    /* Méthode pour ajouter un site*/
+
+	@Override /*Classe hérité de la classe Parente AbstractDaoImpl*/
 	public void addSites(Sites sites) {
 		
 		JdbcTemplate jdbcTemplate = new JdbcTemplate();
-
+                                      /* Nom des colonnes se situant dans table de la base de données*/
 		String sql = "INSERT INTO sites (nom_du_site, nombre_de_secteur) VALUES (?, ?);";
 
 		Object[] args = new Object[] { sites.getNom_du_site(), sites.getNombre_de_secteur()};
@@ -29,8 +34,12 @@ public class SitesDaoImpl extends AbstractDaoImpl implements SitesDao {
 	
 	}
 
-	@Override
+                   
+                   /* Méthode pour récupérer un site*/
+        
+	@Override /*Classe hérité de la classe Parente AbstractDaoImpl*/
 	public Sites getSites(Sites sites) {
+            
 		String sql = "SELECT * FROM sites WHERE nom_du_site = ?";
 
 		JdbcTemplate jdbcTemplate = new JdbcTemplate();
@@ -39,6 +48,7 @@ public class SitesDaoImpl extends AbstractDaoImpl implements SitesDao {
 
 		try {
 			RowMapper<Sites> rowMapper = new SitesMapper();
+                                                          /* Appel à la méthode QueryForObject*/
 			Sites sitesQuery = jdbcTemplate.queryForObject(sql, args, rowMapper);
 			return sitesQuery;
 

@@ -1,4 +1,5 @@
 
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <html>
@@ -8,6 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>${application.name}- A propos</title>
+
 <!-- Bootstrap -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -17,20 +19,20 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
 	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
 	crossorigin="anonymous" />
-<link rel="stylesheet" href="../style/custom.css" />
+
+<!-- Chargement du fichier style.css -->
+<link rel="stylesheet" href="resources/css/style.css" />
 </head>
 <body>
-	<%@ include file="_include/header.jsp"%>
+    
+ <!-- Inclusion du Header -->
+<%@ include file="_include/header.jsp"%>
 
 
-        <div style="margin-top: 5%">
-            <p>Page auth!</p>
-        </div>
 	
-	
-	
-	<!-- Formulaire -->
-<div class="container">
+<!-- Formulaire -->
+<div class="MiseFormulaire">
+
     <h1>Connexion</h1>
 
     <form method="post" action="login" class="form-horizontal">
@@ -48,8 +50,9 @@
             </div>
         </div>
 
+ <!-- Bouton Se connecter -->
         <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
+            <div class="BoutonFormu">
                 <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-log-in"></span> se connecter</button>
 
 

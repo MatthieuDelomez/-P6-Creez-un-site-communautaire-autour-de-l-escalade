@@ -1,14 +1,15 @@
+
+
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-
- 
- 
  
  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,6 +17,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>${application.name}- A propos</title>
+        
         
         <!-- Bootstrap -->
 <link rel="stylesheet"
@@ -27,13 +29,11 @@
 	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
 	crossorigin="anonymous" />
 
+<!-- Chargement du fichier style.css -->
 <link rel="stylesheet" href="resources/css/style.css" />
         
     </head>
-    
-
-
-    <body>
+ <body>
 
 
 
@@ -42,6 +42,7 @@
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
+            
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="post-heading">
               <h1>Le Topo du diable</h1>
@@ -91,42 +92,34 @@
       </div>
     </article>
 
-          <!-- Importation des publications dans la base de donnée sous forme de liste -->
+          <!-- Importation des listes de publication dans la page jsp -->
           
       <div class="commentaire">
             <div class="comment">
                    <h3>Publication</h3>
-     </div></div>
-    
+     </div>
+   </div>
     
       <article>
  <div class="row">
-               <c:forEach var="publication" items="${publicationList}">
-
-
-    
+     <c:forEach var="publication" items="${publicationList}">
     <div class="publication">            
           <div class="col-lg-8 col-md-10 mx-auto">
-              
-              
-              
-            <p> <div class="pseudoPub">
-                Message écrit par : <c:out value="${publication.pseudo}"/>
-            </div>
+             <p> <div class="pseudoPub">
+                 Message écrit par : <c:out value="${publication.pseudo}"/>
+                  </div>
+                  
                 <br>
-                <c:out value="${publication.description}"/>
-                                 
+              <c:out value="${publication.description}"/>                                 
             </p>
-
-         
           </div>
         </div> 
-      </div></c:forEach>
+      </div>
+     </c:forEach>
     </article>
            
    
           <!-- Formulaire Publication -->
-          
               <div class="row">
     
     <div class="col-md-6">
@@ -157,9 +150,6 @@
         
     </div>
 </div>
-
-
-
 
 
 

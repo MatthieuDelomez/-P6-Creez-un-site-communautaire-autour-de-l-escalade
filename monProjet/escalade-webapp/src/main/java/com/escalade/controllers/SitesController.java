@@ -13,6 +13,5 @@ public class SitesController extends AbstractController {
          return "jsp/sites";
     }
 	
-	//private SitesManager sitesManager = getManagerFactory().getSitesManager();
 
 }

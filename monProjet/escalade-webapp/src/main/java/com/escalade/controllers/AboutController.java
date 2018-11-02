@@ -1,25 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.escalade.controllers;
 
-import com.escalde.business.manager.TopoManager;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- *
- * @author Ben Gourion
+ *  Controller chargé de synchroniser le Model et la Vue
+ *  Récupérer les données utilisateur pour les filitrer via  
+ *  le model et déléguer la production de sortie à la vue.
+ * @author Matthieu Delomez
  */
 @Controller
 public class AboutController extends AbstractController {
     
-    
+    // Requête Mapping sur la page about
     @RequestMapping("/about")
     public String about(){
         
+        // Retourner la page about.jsp
         return "about";
     }
     

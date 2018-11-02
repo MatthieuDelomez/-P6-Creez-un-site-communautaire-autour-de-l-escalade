@@ -2,7 +2,15 @@ package com.escalade.business.managerImpl;
 
 import com.escalde.business.manager.*;
 
+/*
+Classe ManagerFactoryImpl servant à implementer les methodes se trouvant dans l'interface ManagerFactory
+*/
+
 public class ManagerFactoryImpl implements ManagerFactory {
+    
+                   /*
+                   Configuration des differentes interfaces Manager
+                   */
 
 	private CommentaireManager commentaireManager;
 	public CommentaireManager getCommentaireManager() {return this.commentaireManager;}

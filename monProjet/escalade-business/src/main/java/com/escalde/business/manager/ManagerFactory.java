@@ -1,6 +1,14 @@
 package com.escalde.business.manager;
 
+/*
+Creation de l'interface ManagerFactory
+*/
+
 public interface ManagerFactory {
+    
+    /*
+    Creation des methodes Manager qui servira à appeler les differentes classes Metier (business) de l'application 
+    */
 
     CommentaireManager getCommentaireManager();
 

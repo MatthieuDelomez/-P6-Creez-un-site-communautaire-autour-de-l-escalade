@@ -1,7 +1,11 @@
 package org.projetoc.escalade.model;
 
+/*
+Création des models: JavaBeans manipulés par l'application
+*/
 public class Publication {
 
+                   /*Variables correspondant aux colonnes de la table Publication*/
 	private String titre;
 	private String description;
 	private String date_maj;
@@ -9,7 +13,7 @@ public class Publication {
 
 	private Utilisateur author;
 
-	
+	/*Constructeur du model Publication| Définition des variables*/
 	public Publication(String titre, String description, String date_maj, String pseudo, Utilisateur author) {
 		super();
 		this.titre = titre;
@@ -23,7 +27,9 @@ public class Publication {
 
 	super();
 	}
-
+        
+        
+                   /* Création des Getters et Setters avec l'option Refactor*/
 	public String getTitre() {
 		return titre;
 	}

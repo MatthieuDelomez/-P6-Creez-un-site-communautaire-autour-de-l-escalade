@@ -1,8 +1,4 @@
-<%-- 
-    Document   : utilisateur
-    Created on : 6 oct. 2018, 17:01:27
-    Author     : Ben Gourion
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

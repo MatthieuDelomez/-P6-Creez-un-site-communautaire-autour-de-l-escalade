@@ -5,7 +5,6 @@ org\projetoc\escalade\consumer\impl\dao\SitesDaoImpl.class
 org\projetoc\escalade\consumer\contract\dao\PublicationDao.class
 org\projetoc\escalade\consumer\App.class
 RowMapper\PublicationMapper.class
-org\projetoc\escalade\consumer\contract\dao\EscaladeDao.class
 org\projetoc\escalade\consumer\contract\dao\VoiesDao.class
 RowMapper\VoiesMapper.class
 RowMapper\EspacePretMapper.class

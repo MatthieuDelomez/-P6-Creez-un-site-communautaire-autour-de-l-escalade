@@ -1,3 +1,5 @@
+
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <html>
@@ -10,8 +12,8 @@
 
 
 
-    <!-- Bootstrap core CSS -->
-    <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap core CSS -->
+<link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
 <!-- Bootstrap -->
@@ -24,22 +26,17 @@
 	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
 	crossorigin="anonymous" />
 
-
-
+<!-- Chargement du fichier style.css -->
 <link rel="stylesheet" href="resources/css/style.css" />
 
 </head>
-
-
-
-<body>
+  <body>
     
-       <%@ include file="_include/header.jsp"%>
+ <!-- Page Header -->
+ <!-- Inclusion du Header -->
+ <%@ include file="_include/header.jsp"%>
        
- 
 
-
-    <!-- Page Header -->
     <header class="masthead" style="background-image: url('resources/img/topo01.jpg')">
       <div class="overlay"></div>
       <div class="container">
@@ -55,6 +52,7 @@
     </header>
 
     <!-- Main Content -->
+    <!-- Appel à la méthode ListTopo-->
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
@@ -83,14 +81,10 @@
     </div>
               
 
+ <!-- Inclusion du Footer -->
+  <%@ include file="_include/footer.jsp"%>
 
-       <%@ include file="_include/footer.jsp"%>
 
-          
-          
-          
-
-    
 
     <!-- Bootstrap core JavaScript -->
     <script src="resources/vendor/jquery/jquery.min.js"></script>

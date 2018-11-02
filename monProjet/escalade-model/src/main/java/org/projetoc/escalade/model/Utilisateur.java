@@ -1,7 +1,12 @@
 package org.projetoc.escalade.model;
 
+/*
+Création des models: JavaBeans manipulés par l'application
+*/
+
 public class Utilisateur {
 
+                   /*Variables correspondant aux colonnes de la table Utilisateur*/
 	private String pseudo;
 	private String nom;
 	private String prenom;
@@ -9,7 +14,7 @@ public class Utilisateur {
                    private String motPasse;
 
 	
-
+	/*Constructeur du model Utilisateur Définition des variables*/
 	public Utilisateur(String pseudo, String nom, String prenom, String email, String motPasse) {
 		super();
 		this.pseudo = pseudo;
@@ -22,7 +27,8 @@ public class Utilisateur {
 	public Utilisateur() {
 		super();
 	}
-
+        
+                   /* Création des Getters et Setters avec l'option Refactor*/
 	public String getPseudo() {
 		return pseudo;
 	}
