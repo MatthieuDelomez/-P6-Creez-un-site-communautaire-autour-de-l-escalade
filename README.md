@@ -8,7 +8,7 @@
 
 1. Téléchargez ou clonez le projet via Github
 
-2. Effectuez un mvn build suivi d'un mvn clean compile dans le panneau de commande pour installer les dépendances Maven
+2. Effectuez un mvn build puis un clean compile dans le panneau de commande pour installer les dépendances Maven
 
 3. Déployez le domaine fonctionnel qui se situe dans le dossier PostgreSql
 
