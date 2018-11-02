@@ -1,10 +1,10 @@
 # -P6-Creez-un-site-communautaire-autour-de-l-escalade =======================================
 
-Prerequisites: <br>
-Java jdk 9 <br>
-Spring<br>
-Apache Maven<br>
-<br>
+ Prerequisites: <br>
+ Java jdk 9 <br>
+ Spring<br>
+ Apache Maven<br>
+ <br>
 
 1. Téléchargez ou clonez le projet via Github
 
@@ -22,6 +22,7 @@ Apache Maven<br>
 <br>
 <br>
 Naviguez avec votre navigateur à l'adresse suivant http://localhost:8084/
+<br>
 <br>
 <br>
 
